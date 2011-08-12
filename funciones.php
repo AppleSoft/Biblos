@@ -80,4 +80,13 @@ function extraeCampo ($scampo,$fcampo,$wcampo,$wcampo1){
         return $resultado;
 }
 
+function extraeCampo2 ($scampo,$fcampo,$nombre_campo1,$criterio1,$nombre_campo2,$criterio2){
+        $query = "SELECT $scampo FROM $fcampo WHERE $nombre_campo1='$criterio1' and $nombre_campo2='$criterio2'";
+        $existe = mysql_query($query);
+        $carga= mysql_fetch_row($existe);
+        $resultado=$carga[0];
+        return $resultado;
+}
+
+
 ?>
