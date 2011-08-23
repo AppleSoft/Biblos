@@ -1,0 +1,53 @@
+CREATE TABLE `student` (
+  `id` int(2) NOT NULL auto_increment,
+  `name` varchar(50) NOT NULL default '',
+  `class` varchar(10) NOT NULL default '',
+  `mark` int(3) NOT NULL default '0',
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+
+-- 
+-- Dumping data for table `student`
+-- 
+
+INSERT INTO `student` VALUES (1, 'John Deo', 'Four', 75);
+INSERT INTO `student` VALUES (2, 'Max Ruin', 'Three', 85);
+INSERT INTO `student` VALUES (3, 'Arnold', 'Three', 55);
+INSERT INTO `student` VALUES (4, 'Krish Star', 'Four', 60);
+INSERT INTO `student` VALUES (5, 'John Mike', 'Four', 60);
+INSERT INTO `student` VALUES (6, 'Alex John', 'Four', 55);
+INSERT INTO `student` VALUES (7, 'My John Rob', 'Fifth', 78);
+INSERT INTO `student` VALUES (8, 'Asruid', 'Five', 85);
+INSERT INTO `student` VALUES (9, 'Tes Qry', 'Six', 78);
+INSERT INTO `student` VALUES (10, 'Big John', 'Four', 55);
+INSERT INTO `student` VALUES (11, 'Ronald', 'Six', 89);
+INSERT INTO `student` VALUES (12, 'Recky', 'Six', 94);
+INSERT INTO `student` VALUES (13, 'Kty', 'Seven', 88);
+INSERT INTO `student` VALUES (14, 'Bigy', 'Seven', 88);
+INSERT INTO `student` VALUES (15, 'Tade Row', 'Four', 88);
+INSERT INTO `student` VALUES (16, 'Gimmy', 'Four', 88);
+INSERT INTO `student` VALUES (17, 'Tumyu', 'Six', 54);
+INSERT INTO `student` VALUES (18, 'Honny', 'Five', 75);
+INSERT INTO `student` VALUES (19, 'Tinny', 'Nine', 18);
+INSERT INTO `student` VALUES (20, 'Jackly', 'Nine', 65);
+INSERT INTO `student` VALUES (21, 'Babby John', 'Four', 69);
+INSERT INTO `student` VALUES (22, 'Reggid', 'Seven', 55);
+INSERT INTO `student` VALUES (23, 'Herod', 'Eight', 79);
+INSERT INTO `student` VALUES (24, 'Tiddy Now', 'Seven', 78);
+INSERT INTO `student` VALUES (25, 'Giff Tow', 'Seven', 88);
+INSERT INTO `student` VALUES (26, 'Crelea', 'Seven', 79);
+INSERT INTO `student` VALUES (27, 'Big Nose', 'Three', 81);
+INSERT INTO `student` VALUES (28, 'Rojj Base', 'Seven', 86);
+INSERT INTO `student` VALUES (29, 'Tess Played', 'Seven', 55);
+INSERT INTO `student` VALUES (30, 'Reppy Red', 'Six', 79);
+INSERT INTO `student` VALUES (31, 'Marry Toeey', 'Four', 88);
+INSERT INTO `student` VALUES (32, 'Binn Rott', 'Seven', 90);
+INSERT INTO `student` VALUES (33, 'Kenn Rein', 'Six', 96);
+INSERT INTO `student` VALUES (34, 'Gain Toe', 'Seven', 69);
+INSERT INTO `student` VALUES (35, 'Rows Noump', 'Six', 88);
+INSERT INTO `student` VALUES (36, 'Some name1', 'Seven', 46);
+INSERT INTO `student` VALUES (37, 'Some name2', 'Six', 54);
+INSERT INTO `student` VALUES (38, 'some name3', 'Four', 57);
+INSERT INTO `student` VALUES (39, 'Some name 4', 'Five', 80);
+INSERT INTO `student` VALUES (40, 'Some name 5', 'Five', 49);
+INSERT INTO `student` VALUES (41, 'Some Name 4', 'Five', 66);

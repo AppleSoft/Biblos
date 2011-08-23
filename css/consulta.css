@@ -129,12 +129,23 @@ textarea {
 
 #grafica {
     position:absolute;
-    top: 250px;
+    top: 200px;
     left:420px;
     width: 8em;
     padding:1.5em;
     background: white;
     border:2px solid #eee;
+    -moz-border-radius:0.4em;
+    -khtml-border-radius:0.4em;
+}
+
+#qr {
+    position:absolute;
+    top: 330px;
+    left:390px;
+    padding:1em;
+    background: white;
+    border:1px solid #32CD32;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }

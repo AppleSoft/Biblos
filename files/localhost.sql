@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 12-08-2011 a las 13:05:11
+-- Tiempo de generación: 18-08-2011 a las 13:27:29
 -- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
@@ -303,10 +303,6 @@ CREATE TABLE IF NOT EXISTS `usuario_has_libro` (
 -- Volcar la base de datos para la tabla `usuario_has_libro`
 --
 
-INSERT INTO `usuario_has_libro` (`usuario_dni`, `libro_categoria_id_categoria`, `libro_cod_apellido`, `libro_cod_titulo`, `fecha_hora_prestamo`, `fecha_hora_devolucion_propuesta`, `fecha_hora_devolucion_efectivo`) VALUES
-(00000001, 700, 'All', 'abc', '2011/08/12-13:02:15', '0000-00-00 00:00:00', NULL),
-(00000001, 800, 'All', 'Cor', '2011/08/12-13:02:58', '0000-00-00 00:00:00', NULL),
-(00000001, 800, 'Gar', 'Cie', '2011/08/12-13:02:27', '0000-00-00 00:00:00', NULL);
 
 --
 -- Filtros para las tablas descargadas (dump)
