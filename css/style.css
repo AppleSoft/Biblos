@@ -1,0 +1,16 @@
+/* 
+    Document   : style
+    Created on : 11-ago-2011, 10:39:02
+    Author     : mircosx
+    Description: Hoja de estilo conjunta del proyecto biblioteca
+        
+*/
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+textarea { 
+    resize: none;
+}
+
