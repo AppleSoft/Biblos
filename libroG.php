@@ -25,9 +25,8 @@ if (!isset($_SESSION['logeado'])
         <FORM ACTION="libroP.php" METHOD="post">
             <fieldset class="login">
             <legend>Datos nuevo libro</legend>
-            Titulo:<br> 
-            <INPUT TYPE="text" NAME="titulo" id="titulo">
-
+            Titulo:<br>
+            <INPUT TYPE=text NAME=titulo <?php if(!isset($_GET['faltacampo1']))echo "/>*"; else echo controlacampo($_GET['faltacampo1']);?>
             <BR>
             Autor:<br>
             <?php
@@ -45,7 +44,7 @@ if (!isset($_SESSION['logeado'])
             ?>
             <br>
             ISBN:<br>
-            <INPUT TYPE="text" NAME="isbn">
+            <INPUT TYPE="text" NAME="isbn"/>
             <br>
             Fecha de publicaci&oacute;n [aaaa/mm/dd]: <br>
             <INPUT TYPE="text" NAME="fecha_publicacion">

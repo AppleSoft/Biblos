@@ -1,6 +1,12 @@
 <?php
-
-$titulo = $_POST['titulo'];
+include "defcon.php";
+include "funciones.php";
+$campo1="0";
+if(!$_POST['titulo']){  
+    $campo1="1";
+echo header("location: libroG.php?faltacampo1=$campo1");}
+else {
+$id_titulo=$_POST['titulo'];
 $id_autor = $_POST['autor'];
 $id_categoria = $_POST['categoria'];
 $id_idioma_639_1 = $_POST['idiomas_639_1'];
@@ -12,8 +18,6 @@ $num_paginas = $_POST['num_paginas'];
 $sinopsis = $_POST['sinopsis'];
 $edicion = $_POST['edicion'];
 
-include "defcon.php";
-include "funciones.php";
 
 $q1 = "SELECT apellido1 FROM autor where id_autor=$id_autor";
 $rt1 = mysql_query($q1);
@@ -32,4 +36,5 @@ $query = "INSERT INTO libro (
         '$sinopsis','$edicion','$id_autor','$id_editorial','$id_idioma_639_1')
 ";
 $result = mysql_query($query);
+}
 ?>
