@@ -1,5 +1,5 @@
 <?php
- 
+include "defcon.php";
 $nombre_editorial=$_POST['nombre_editorial'];
 
 $query="INSERT INTO editorial

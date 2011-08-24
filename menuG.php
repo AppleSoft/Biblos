@@ -28,7 +28,6 @@ if (!isset($_SESSION['logeado'])
         echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>-||-";
         echo "<a href='modificaEditorialG.php'>Modificar editorial</a>-||-";
         echo "<a href='consulta_general.php'>Consulta la biblioteca</a>-|";
-        
 
         echo "<br><br><a href='salida.php'>Logout</a>";
 

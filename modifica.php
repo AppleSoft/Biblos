@@ -3,7 +3,7 @@ session_start();
 
 if (!isset($_SESSION['logeado'])
         || $_SESSION['logeado'] != true) {
-    header('Location: loginG.php'); //Redirige al inicio de sesion en caso de que no tengas hecho el login
+    header('Location: loginG.php');
     exit;
 } else {
     $usuario = $_SESSION['usuario'];
@@ -11,7 +11,7 @@ if (!isset($_SESSION['logeado'])
     $usuario_dni = $_SESSION['dni'];
 }
 
-if ($tipousuario != 1 || $tipousuario != 2) {
+if ($tipousuario != 0 || $tipousuario != 1) {
     echo "<script type='text/javascript'>
         window.alert('ahi listillo! tienes que ser administrador para poder modificar!')
         </script>";
