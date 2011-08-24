@@ -143,6 +143,10 @@ function listadoPorAutor($usuario, $dondebuscas, $quebuscas, $pagina, $mipagina)
         echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>"; //libro -> cod_titulo
         $fecha = date("Y/m/d-H:i:s");
         echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>"; //fecha y hora date("Ymd") date("H:i:s")
+        echo "<div id='qr'>";
+            $data = qrlink($row[4], $row[12]);
+            qrgen($data);
+            echo "</div>";
     }
     echo "<br>Se han encontrado <b>$supertotal</b> libro(s) con tu criterio de busqueda<br>";
     echo "(Libro cuyo <b>$dondebuscas</b> contenga <b>$quebuscas</b>)<br>";
@@ -220,6 +224,10 @@ function listadoPorTitulo($usuario, $dondebuscas, $quebuscas, $pagina, $mipagina
         echo "<input type='hidden' name='libro_cod_apellido' value='$row[1]'>"; //libro -> cod_apellido
         echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>"; //libro -> cod_titulo
         echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>"; //fecha y hora date("Ymd") date("H:i:s")
+        echo "<div id='qr'>";
+            $data = qrlink($row[4], $row[12]);
+            qrgen($data);
+            echo "</div>";
     }
 
     echo "<br>Se han encontrado <b>$total_resultados</b> libro(s) con tu criterio de busqueda<br>";
@@ -301,6 +309,10 @@ function listadoPorCategoria($usuario, $dondebuscas, $quebuscas, $pagina, $mipag
         echo "<input type='hidden' name='libro_cod_apellido' value='$row[1]'>"; //libro -> cod_apellido
         echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>"; //libro -> cod_titulo
         echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>"; //fecha y hora date("Ymd") date("H:i:s")
+        echo "<div id='qr'>";
+            $data = qrlink($row[4], $row[12]);
+            qrgen($data);
+            echo "</div>";
     }
 
     echo "<br>Se han encontrado <b>$total_resultados</b> libro(s) con tu criterio de busqueda<br>";
@@ -348,12 +360,12 @@ function listadoPorCategoria($usuario, $dondebuscas, $quebuscas, $pagina, $mipag
     echo "</div>";
 }
 
- function qrlink($nombrelibro,$ididioma)
-                {
-           $nombrelibbus= str_replace(" ", "_",$nombrelibro);
-           $linkdata = "http://".$ididioma.".wikipedia.org/wiki/".$nombrelibbus;
-           return $linkdata;
-                          }
+function qrlink($nombrelibro, $ididioma) {
+    $nombrelibro = trim($nombrelibro);
+    $nombrelibbus = str_replace(" ", "_", $nombrelibro);
+    $linkdata = "http://" . $ididioma . ".wikipedia.org/wiki/" . $nombrelibbus;
+    return $linkdata;
+}
 
 function qrgen($linkdata) {
     include "/phpqrcode/qrlib.php";
@@ -371,4 +383,15 @@ function qrgen($linkdata) {
     echo '<img src="' . $PNG_WEB_DIR . basename($filename) . '" />';
 }
 
+function eligeplantilla($id){
+echo "<head>
+        <title>Biblos - Consulta general</title>
+        <link rel='shortcut icon' type='image/x-icon' href='imgs/favicon.ico'  />
+        <link rel='stylesheet' type='text/css' href='css/consulta".$id.".css' />   
+        <script src='js/funciones.js' type='text/javascript'></script>
+        <script type='text/javascript'> 
+            window.onload=esconde_div;
+        </script>
+    </head>";
+}
 ?>

@@ -7,7 +7,7 @@
 
 <body>
     <div id="autocompleta">
-        <form>
+        <form id="busqueda">
             <div>
                 <input type="text" size="30" value="" id="quebuscas" onkeyup="escaneaDB(this.value);" onblur="rellenaNube();" name="quebuscas" />
             </div>

@@ -4,31 +4,11 @@ html {
     background:#fafafa;
 }
 form {
-    background:#fff;
+    background:#0000FF;
     padding:1em;
-    border:2px solid #eee;
-    margin:1em;
-    width:30em;
-    -moz-border-radius:0.4em;
-    -khtml-border-radius:0.4em;
-}
-
-#formulario_consulta {
-    position:absolute;
-    border:4px solid #ddd;
-    top:5em;
-    left:420px;
-    width: 20em;
-    background: white;
-}
-#dropdown_filtros {
-    position:absolute;
-    top:5em;
-    left:700px;
-    width: 18em;
-    background: white;
-    border:6px solid #ddd;
-    padding: 5px;
+    border:2px solid #0000FF;
+    margin:15px;
+    width:430px;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
@@ -59,13 +39,19 @@ legend span {
 input {
     padding:0.15em;
     width:20em;
-    border:1px solid #ddd;
-    background:#fafafa;
+    border:1px dotted #ddd;
+    background:#0000FF;
     font:bold 0.95em arial, sans-serif;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
-
 }
+
+input:hover, input:focus, #titulo:hover, textarea:hover {
+    border-width: 3px;
+    border-color:#c5c5c5;
+    background:#f6f6f6;
+}
+
 #titulo {
     padding:0.15em;
     width:18em;
@@ -96,17 +82,10 @@ textarea {
     -khtml-border-radius:0.4em;
 }
 
-input:hover, input:focus, #titulo:hover, textarea:hover {
-    border-width: 3px;
-    border-color:#c5c5c5;
-    background:#f6f6f6;
-} 
 fieldset {
     border:1px solid #ddd;
     padding:0 0.5em 0.5em;
 }
-
-
 
 #submit-go {
     margin-top:1em;
@@ -126,45 +105,80 @@ fieldset {
 textarea {
     resize:none;
 }
-
-#grafica {
+#formulario_consulta {
+    position:absolute;
+    top:30px;
+    left:500px;
+    width: 20em;
+    border:2px dotted #ddd;
+    background: white;
+}
+#busqueda {
+    width: 220px;
+    border:2px dotted #ddd;
+    background: white;
+}
+#filtros  {
     position:absolute;
     top: 200px;
-    left:420px;
+    left:510px;
     width: 8em;
-    padding:1.5em;
-    background: white;
     border:2px solid #eee;
+    background: white;
+    padding:1.5em;
+
+
+    -moz-border-radius:0.4em;
+    -khtml-border-radius:0.4em;
+}
+#autocompleta {
+    position:absolute;
+    top:45px;
+    left:510px;
+    width: 30em;
+
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
 
+#quebuscas {
+    padding:0.15em;
+    width:200px;
+    background:#fafafa;
+    font:bold 0.95em helvetica, sans-serif;
+    -moz-border-radius:0.4em;
+    -khtml-border-radius:0.4em;
+
+}
 #qr {
     position:absolute;
     top: 330px;
     left:390px;
     padding:1em;
     background: white;
-    border:1px solid #32CD32;
+    border:4px dotted #eee;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
 
+#dropdown_filtros {
+    position:absolute;
+    top:5em;
+    left:750px;
+    width: 250px;
+    background: white;
+    border:2px dotted #ddd;
+    padding: 5px;
+    -moz-border-radius:0.4em;
+    -khtml-border-radius:0.4em;
+}
 input[type=checkbox], input[type=radio] { 
     width:1em; 
     height:1em; 
 
     margin:0; }
 
-#autocompleta {
-    position:absolute;
-    top:5em;
-    left:420px;
-    width: 30em;
-    background: white;
-    -moz-border-radius:0.4em;
-    -khtml-border-radius:0.4em;
-}
+
 
 .Nube {
     position: relative;

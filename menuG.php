@@ -22,8 +22,13 @@ if (!isset($_SESSION['logeado'])
         echo "<h1>Hola '" . $_SESSION['usuario'] . "', bienvenido a la biblioteca</h1>";
 
         echo "|-<a href='libroG.php'>Agregar un libro a la biblioteca</a>-||-";
-        echo "<a href='consulta_general.php'>Consulta la biblioteca</a>-||-";
-        echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>-|";
+        echo "<a href='modificaLibroG.php'>Modificar un libro</a>-||-";
+        echo "<a href='autorG.php'>Agregar autor a la biblioteca</a>-||-";
+        echo "<a href='modificaAutorG.php'>Modificar autor</a>-||-";
+        echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>-||-";
+        echo "<a href='modificaEditorialG.php'>Modificar editorial</a>-||-";
+        echo "<a href='consulta_general.php'>Consulta la biblioteca</a>-|";
+        
 
         echo "<br><br><a href='salida.php'>Logout</a>";
 

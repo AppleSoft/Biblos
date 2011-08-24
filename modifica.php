@@ -3,12 +3,23 @@ session_start();
 
 if (!isset($_SESSION['logeado'])
         || $_SESSION['logeado'] != true) {
-
     header('Location: loginG.php'); //Redirige al inicio de sesion en caso de que no tengas hecho el login
+    exit;
+} else {
+    $usuario = $_SESSION['usuario'];
+    $tipousuario = $_SESSION['tipousuario'];
+    $usuario_dni = $_SESSION['dni'];
+}
 
+if ($tipousuario != 1 || $tipousuario != 2) {
+    echo "<script type='text/javascript'>
+        window.alert('ahi listillo! tienes que ser administrador para poder modificar!')
+        </script>";
+    header("Refresh: 2; URL=consulta_general.php");
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,25 +30,47 @@ if (!isset($_SESSION['logeado'])
         include "funciones.php";
         include "defcon.php";
 
-        $usuario_dni = $_POST['usuario_dni'];
-        $libro_categoria_id_categoria = $_POST['libro_categoria_id_categoria'];
-        $libro_cod_apellido = $_POST['libro_cod_apellido'];
-        $libro_cod_titulo = $_POST['libro_cod_titulo'];
-        $fecha_hora_prestamo = $_POST['fecha_hora_prestamo'];
 
-        echo "<br>dni:" . $usuario_dni;
-        echo "<br>id cat:" . $libro_categoria_id_categoria;
-        echo "<br>cod libro:" . $libro_cod_apellido;
-        echo "<br>cod titulo:" . $libro_cod_titulo;
-        echo "<br>fecha:" . $fecha_hora_prestamo;
+        $titulo = $_POST['titulo'];
+        $id_autor = $_POST['id_autor'];
+        $id_categoria = $_POST['categoria'];
+        $idioma_639_1 = $_POST['idiomas_639_1'];
+        $id_editorial = $_POST['id_editorial'];
+        $isbn = $_POST['isbn'];
+        $fecha_publicacion = $_POST['fecha_publicacion'];
+        $fecha_adquisicion = $_POST['fecha_adquisicion'];
+        $num_paginas = $_POST['num_paginas'];
+        $sinopsis = $_POST['sinopsis'];
+        $edicion = $_POST['edicion'];
+        $q1 = "SELECT apellido1 FROM autor where id_autor=$id_autor";
+        $rt1 = mysql_query($q1);
+        $r1 = mysql_fetch_row($rt1);
+        $rf1 = $r1[0];
+        $rf1 = substr($rf1, 0, 3);
+        $rf2 = substr($titulo, 0, 3);
+        $dewey = calcularDewey($id_categoria, $id_autor, $titulo);
 
-        $query = "INSERT INTO usuario_has_libro ( 
-            usuario_dni, libro_categoria_id_categoria, libro_cod_apellido, libro_cod_titulo,fecha_hora_prestamo)
-        VALUES (
-        '$usuario_dni', '$libro_categoria_id_categoria', '$libro_cod_apellido', '$libro_cod_titulo','$fecha_hora_prestamo')";
-        mysql_query($query) or die(mysql_error());
 
-        echo "<br>Has alquilado <b>" . $_POST['titulo'] . "</b>, recuerda que tienes que devolverlo en 3 dias!";
+        $actualiza = "
+        UPDATE libro SET 
+            'isbn'=" . $isbn . " 
+            'titulo'=" . $titulo . "
+            'fecha_publicacion'=" . $fecha_publicacion . "
+            'fecha_adquisicion'=" . $fecha_adquisicion . "
+            'num_paginas'=" . $num_paginas . "
+            'sinopsis'=" . $num_paginas . "
+            'edicion'=" . $edicion . "
+            'autor_id_autor'=" . $id_autor . "
+            'editorial_id_editorial'=" . $id_editorial . "
+            'idiomas_639_1_id_idioma_639_1'=" . $idioma_639_1 . "
+        WHERE categoria_id_categoria='" . $_SESSION['cat'] . "' AND cod_apellido='" . $_SESSION['cod'] . "' AND cod_titulo='" . $_SESSION['ape'] . "'";
+
+        mysql_query($actualiza) or die(mysql_error());
+
+        echo "<script type='text/javascript'>
+        window.alert('Has modificado " . $_POST['titulo'] . " de " . $r1[0] . ".')
+        </script>";
+        header("Refresh: 3; URL=consulta_general.php");
         ?>
     </body>
 </html>
