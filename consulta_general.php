@@ -47,8 +47,8 @@ if (!isset($_SESSION['logeado'])
         echo "<div id='formulario_libro'>";
         echo "<form action='alquila.php' method='post' name='datos_libro'>";
         while ($row = mysql_fetch_array($result)) {
-            echo "Titulo:<input type='text' name='titulo' value='$row[4]'><br>";
-            echo "Autor:<input type='text' name='abc' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>";
+            echo "Titulo:<input type='text' name='titulo' <?php readonly='readonly' value='$row[4]'><br>";
+            echo "Autor:<input type='text' name='abc' readonly='readonly' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>";
             echo "Categoria: <input type='text' name='abc' value='" . buscarCampo('nombre_categoria', 'categoria', 'id_categoria', $row[0]) . "'><br>";
             echo "Idioma: <input type='text' name='abc' value='" . buscarCampo('idioma', 'idiomas_639_1', 'id_idioma_639_1', $row[12]) . "'><br>";
             echo "ISBN: <input type='text' name='abc' value='$row[3]'><br>";

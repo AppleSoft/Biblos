@@ -346,5 +346,15 @@ function extraeCampo2($scampo, $fcampo, $nombre_campo1, $criterio1, $nombre_camp
         echo "</form>";
         echo "</div>";
         }
+function controlacampo($banderacampo){           
+    if($banderacampo=="0") 
+        $marcacampo="/>";    
+   else
+       {
+	$marcacampo= "style='border-color:#FF0000; background-color: #FFFF66'/><font color=#FF0000>*<br/>Debe rellenar todos los campos con *</font>";
+	return $marcacampo;
+	}
+       
+}
 
 ?>

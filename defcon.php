@@ -1,7 +1,7 @@
 <?php
 $server = "localhost";
-$usr = "phpusr";
-$pwd = "phppwd";
+$usr = "root";
+$pwd = "";
 $db = "biblos_g2";
 $conecta = mysql_connect($server, $usr, $pwd);
 if (!$conecta)
