@@ -346,6 +346,7 @@ function extraeCampo2($scampo, $fcampo, $nombre_campo1, $criterio1, $nombre_camp
         echo "</form>";
         echo "</div>";
         }
+<<<<<<< HEAD
 function controlacampo($banderacampo){           
     if($banderacampo=="0") 
         $marcacampo="/>";    
@@ -356,5 +357,7 @@ function controlacampo($banderacampo){
 	}
        
 }
+=======
+>>>>>>> 6bae361ecf74a116dffd1a538338d379e0a1051b
 
 ?>
