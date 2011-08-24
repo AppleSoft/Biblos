@@ -19,7 +19,8 @@ if (!isset($_SESSION['logeado'])
     </head>
     <body>
         <?php
-            include "funciones.php"
+            include "funciones.php";
+            include "defcon.php";
         ?>
         <FORM ACTION="libroP.php" METHOD="post">
             <fieldset class="login">

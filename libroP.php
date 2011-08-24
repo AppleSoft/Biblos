@@ -12,7 +12,7 @@ $num_paginas = $_POST['num_paginas'];
 $sinopsis = $_POST['sinopsis'];
 $edicion = $_POST['edicion'];
 
-include "conexion.php";
+include "defcon.php";
 include "funciones.php";
 
 $q1 = "SELECT apellido1 FROM autor where id_autor=$id_autor";

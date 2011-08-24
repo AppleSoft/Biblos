@@ -4,7 +4,8 @@
 <html>
     <head>
         <title>Login</title>
-      <link rel="stylesheet" type="text/css" href="css/screen.css">   
+      <link rel="stylesheet" type="text/css" href="css/screen.css"> 
+      <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"  />
     </head>
     <body>
         <FORM ACTION="loginP.php" METHOD="post">

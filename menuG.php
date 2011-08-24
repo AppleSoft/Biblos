@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION['logeado'])
@@ -9,12 +8,26 @@ if (!isset($_SESSION['logeado'])
 
     exit;
 }
-
-echo "<h1>Hola '" . $_SESSION['usuario'] . "', bienvenido a la biblioteca</h1>";
-
-echo "<a href='libroG.php'>Agregar un libro a la biblioteca</a>";
-echo "<a href='autorG.php'>Agregar un autor a la biblioteca</a>";
-echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>";
-
-$_SESSION['logeado'] = true;
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Biblos</title>
+        <link rel="stylesheet" type="text/css" href="css/consulta.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"  />
+    </head>
+    <body>
+
+        <?php
+        echo "<h1>Hola '" . $_SESSION['usuario'] . "', bienvenido a la biblioteca</h1>";
+
+        echo "|-<a href='libroG.php'>Agregar un libro a la biblioteca</a>-||-";
+        echo "<a href='consulta_general.php'>Consulta la biblioteca</a>-||-";
+        echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>-|";
+
+        echo "<br><br><a href='salida.php'>Logout</a>";
+
+        $_SESSION['logeado'] = true;
+        ?>
+
+    </body>

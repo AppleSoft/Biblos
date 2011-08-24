@@ -1,89 +1,128 @@
-<?php
-include "conexion.php";
+<?php 
+session_start();
 
-$mipagina=$_SERVER['PHP_SELF'];
+if (!isset($_SESSION['logeado'])
+    || $_SESSION['logeado'] != true) {
 
-		$sql = "SELECT * FROM libro ORDER BY cod_titulo";
-		$query = mysql_query($sql);
-		$total_results = mysql_num_rows($query);
-		$limit = "3"; //limit of archived results per page.
-		$total_pages = ceil($total_results / $limit); //total number of pages
-                
-                echo "hay $total_results campos<br>";
-if (empty($page))
-	{
-		$page = "1"; //default page if none is selected
-	}
-$offset = ($page - 1) * $limit; //starting number for displaying results out of DB
+    header('Location: loginG.php'); //Redirige al inicio de sesion en caso de que no tengas hecho el login
 
-	$query = "SELECT * FROM libro ORDER BY cod_titulo LIMIT $offset, $limit";
-	$result = mysql_query($query);
-//This is the start of the normal results...
+    exit;
 
-	while ($row = mysql_fetch_array($result))
-		{
-			echo $row[0]."-".$row[1]."-".$row[2]."<br>";
-		}
-		mysql_close();
-
-
-// This is the Previous/Next Navigation
-echo "<font face=Verdana size=1>";
-echo "Pages:($total_pages)&nbsp;&nbsp;"; // total pages
-if ($page != 1)
-{
-echo "<a href=$mipagina?page=1><< First</a>&nbsp;&nbsp;&nbsp;"; // First Page Link
-$prevpage = $page - 1;
-echo "&nbsp;<a href=$mipagina?page=$prevpage><<</a>&nbsp;"; // Previous Page Link
 }
-    	if ($page == $total_pages) 
-			{
-      			$to = $total_pages;
-    		} 
-		elseif ($page == $total_pages-1) 
-			{
-      			$to = $page+1;
-    		} 
-		elseif ($page == $total_pages-2) 
-			{
-     		 	$to = $page+2;
-    		} 
-		else 
-			{
-      			$to = $page+3;
-    		}
-    	if ($page == 1 || $page == 2 || $page == 3) 
-			{
-      			$from = 1;
-    		} 
-		else 
-			{
-      			$from = $page-3;
-    		}
-			
-for ($i = $from; $i <= $to; $i++)
-
-	{
-	if ($i == $total_results) $to=$total_results;
-	if ($i != $page)
-		{
-		echo "<a href=$mipagina?showold=yes&page=$i>$i</a>";
-		}
-	else
-		{
-		echo "<b><font face=Verdana size=2>[$i]</font></b>";
-		}
-	if ($i != $total_pages)
-		echo "&nbsp;";
-	}
-if ($page != $total_pages)
-{
-$nextpage = $page + 1;
-echo "&nbsp;<a href=$mipagina?page=$nextpage>>></a>&nbsp;"; // Next Page Link
-echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?page=$total_pages>Last >></a>"; // Last Page Link
-}
-echo "</font>";
-
-// This is the end of the Previous/Next Navigation
-
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+      <link rel="stylesheet" type="text/css" href="css/consulta.css">   
+    </head>
+    <body>
+        
+<?php
+
+include "funciones.php";
+conexion();
+
+
+$mipagina = $_SERVER['PHP_SELF'];
+$usuario = $_SESSION['usuario'];
+$dni=$_SESSION['dni'];
+
+if (isset($_GET['pagina'])) $pagina=$_GET['pagina'];
+
+if (!isset($pagina)) {
+    $pagina = "1";
+}
+
+$sql = "SELECT * FROM libro ORDER BY titulo";
+$query = mysql_query($sql);
+$total_results = mysql_num_rows($query);
+$limite = "1";
+$total_paginas = ceil($total_results / $limite);
+
+$offset = ($pagina - 1) * $limite;
+
+$query = "SELECT * FROM libro ORDER BY cod_titulo LIMIT $offset, $limite";
+$result = mysql_query($query);
+
+echo "<form action='alquila.php' method='post'>";
+while ($row = mysql_fetch_array($result)) {
+    echo "Titulo:<input type='text' name='titulo' value='$row[4]'><br>";
+    echo "Autor:<input type='text' name='abc' value='".buscarCampo('nombre','autor','id_autor',$row[10])."&nbsp;".buscarCampo('apellido1','autor','id_autor',$row[10])."&nbsp;".buscarCampo('apellido2','autor','id_autor',$row[10])."'><br>";
+    echo "Categoria: <input type='text' name='abc' value='".buscarCampo('nombre_categoria','categoria','id_categoria',$row[0])."'><br>";
+    echo "Idioma: <input type='text' name='abc' value='".buscarCampo('idioma','idiomas_639_1','id_idioma_639_1',$row[12])."'><br>";
+    echo "ISBN: <input type='text' name='abc' value='$row[3]'><br>";
+    echo "Fecha pub: <input type='text' name='abc' value='$row[5]'><br>";
+    echo "Fecha adq: <input type='text' name='abc' value='$row[6]'><br>";
+    echo "Paginas: <input type='text' name='abc' value='$row[7]'><br>";
+    echo "Sinopsis: <input type='textarea' name='abc' value='$row[8]'><br>";
+    echo "Edicion: <input type='text' name='abc' value='$row[9]'><br>";
+    echo "Editor: <input type='text' name='abc' value='".buscarCampo('nombre_editorial','editorial','id_editorial',$row[11])."'><br>";
+    
+    $fecha=date("Y/m/d-H:i:s");
+    echo "<input type='hidden' name='usuario_dni' value='".buscarCampo('dni','usuario','nombre_usuario',$usuario)."'>"; //usuario ->dni
+    echo "<input type='hidden' name='libro_categoria_id_categoria' value='$row[0]'>"; //categoria -> id_categoria 
+    echo "<input type='hidden' name='libro_cod_apellido' value='$row[1]'>"; //libro -> cod_apellido
+    echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>"; //libro -> cod_titulo
+    echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>"; //fecha y hora date("Ymd") date("H:i:s")
+}
+
+mysql_close();
+
+echo "<br>Hay $total_paginas libros en la biblioteca<br>";
+if ($pagina != 1) {
+    echo "<br><a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
+    $ant_pagina = $pagina - 1;
+    echo "&nbsp;<a href=$mipagina?pagina=$ant_pagina><<</a>&nbsp;";
+}
+if ($pagina == $total_paginas) {
+    $to = $total_paginas;
+} elseif ($pagina == $total_paginas - 1) {
+    $to = $pagina + 1;
+} elseif ($pagina == $total_paginas - 2) {
+    $to = $pagina + 2;
+} else {
+    $to = $pagina + 3;
+}
+if ($pagina == 1 || $pagina == 2 || $pagina == 3) {
+    $from = 1;
+} else {
+    $from = $pagina - 3;
+}
+
+for ($i = $from; $i <= $to; $i++) {
+    if ($i == $total_results)
+        $to = $total_results;
+    if ($i != $pagina) {
+        echo "<a href=$mipagina?pagina=$i>$i</a>";
+    } else {
+        echo "<b>[$i]</b>";
+    }
+    if ($i != $total_paginas)
+        echo "&nbsp;";
+}
+if ($pagina != $total_paginas) {
+    $sig_pagina = $pagina + 1;
+    echo "&nbsp;<a href=$mipagina?pagina=$sig_pagina>>></a>&nbsp;";
+    echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_paginas>ultima >></a>";
+}
+
+$posible_alquiler = buscarCampo('fecha_hora_prestamo', 'usuario_has_libro', 'usuario_dni', $dni);
+
+        echo "<br><br>";
+        
+        if (is_null($posible_alquiler))
+        echo "<input type='submit' value='Alquila libro'/>";
+        else echo "Ya has alquilado un libro (poner aqui cual libro y cuando tiene que devolverlo";
+       
+        
+        echo "</form>";
+        echo " tu dni es: $dni";
+?>
+
+    
+
+
+        
+</body>
+</html>
