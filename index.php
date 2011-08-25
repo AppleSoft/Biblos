@@ -1,17 +1,22 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>Login</title>
+      <link rel="stylesheet" type="text/css" href="css/screen.css"> 
+      <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"  />
     </head>
     <body>
-       
-        <form name="login" action="login.php" method="POST">
-            Usuario<input type="text" name="dni" value="" /><br />
-            Clave<input type="password" name="clave" value="" /><br />
-            <input type="submit" value="Login" />
-        </form> 
-        
-        
-    </body>
+        <FORM ACTION="loginP.php" METHOD="post">
+            Usuario : <INPUT TYPE="text" NAME="nombre_usuario" SIZE=8 MAXLENGTH=8 /><br><BR>
+            Password: <INPUT TYPE="password" NAME="password" SIZE=8 MAXLENGTH=8 /><BR><BR>
+
+            <input type="submit" value="Entrar" />
+            <input type="reset" value="Borrar" />
+             <?php 
+                if (isset($_GET['error'])) echo $_GET['error']; 
+            ?>
+        </form>
+            </body>
 </html>

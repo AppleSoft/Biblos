@@ -1,12 +1,15 @@
 html {
     font: 90%/1.3 Helvetica,sans-serif;
     padding:1em;
-    background:#fafafa;
+    color:#00bfff;
+    background-color: #ffdead;
 }
 form {
-    background:#0000FF;
+    position: absolute;
+    top: 70px;
+    background:#fff;
     padding:1em;
-    border:2px solid #0000FF;
+    border:2px solid #eee;
     margin:15px;
     width:430px;
     -moz-border-radius:0.4em;
@@ -40,7 +43,7 @@ input {
     padding:0.15em;
     width:20em;
     border:1px dotted #ddd;
-    background:#0000FF;
+    background:#fafafa;
     font:bold 0.95em arial, sans-serif;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
@@ -118,16 +121,14 @@ textarea {
     border:2px dotted #ddd;
     background: white;
 }
-#filtros  {
+.filtros  {
     position:absolute;
     top: 200px;
     left:510px;
-    width: 8em;
+    width: 9em;
     border:2px solid #eee;
     background: white;
     padding:1.5em;
-
-
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
@@ -152,8 +153,8 @@ textarea {
 }
 #qr {
     position:absolute;
-    top: 330px;
-    left:390px;
+    top: 240px;
+    left:475px;
     padding:1em;
     background: white;
     border:4px dotted #eee;
@@ -207,3 +208,18 @@ input[type=checkbox], input[type=radio] {
 .listaCoincidencias li:hover {
     background-color: #659CD8;
 }
+
+#menu {
+    display:block;
+        color:black;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    -moz-border-radius:0.4em;
+    -khtml-border-radius:0.4em;
+}
+A:link {text-decoration:none;}
+A:visited {text-decoration:none;}
+A:active {text-decoration:none;}
+A:hover {text-decoration:underline;}
+

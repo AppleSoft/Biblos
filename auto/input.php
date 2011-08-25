@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/consulta.css" />
     <script src="../js/funciones.js" type="text/javascript"></script>
     <script src="../js/jquery.js" type="text/javascript"></script>
 </head>

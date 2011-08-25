@@ -16,7 +16,7 @@
         echo "<select onchange='cambiaInput(this.value)'>";
                 echo "<option name='autor' value=''>Seleciona una opcion</option>";
         while ($row = mysql_fetch_row($result)) {
-            echo "<option name='autor' value='$row[1]'>$row[1] (ID:$row[0])</option>";
+            echo "<option name='autor' value='$row[0]'>$row[1] (ID:$row[0])</option>";
         }
         echo "</select>";
         ?>
