@@ -1,7 +1,7 @@
 <?php
 
-$db = new mysqli('localhost', 'root', 'mircosx', 'biblos_g2'); //php5.
-// include "../defcon.php"; php4.
+$db = new mysqli('localhost', 'root', 'mircosx', 'biblos_g2');
+
 
 if (!$db) {
 

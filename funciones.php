@@ -1,6 +1,6 @@
 <?php
 
-function rellenarCampos($ftabla, $orden) {
+function rellenarCampos($ftabla, $orden) { 
     include "defcon.php";
     $query = "SELECT * FROM $ftabla ORDER BY $orden";
     $result = mysql_query($query);

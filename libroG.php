@@ -1,5 +1,9 @@
+
+
 <?php 
-session_start();
+/*
+ session_start();
+ 
 
 if (!isset($_SESSION['logeado'])
     || $_SESSION['logeado'] != true) {
@@ -9,7 +13,10 @@ if (!isset($_SESSION['logeado'])
     exit;
 
 }
+ * 
+ */
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>

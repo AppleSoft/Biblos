@@ -7,9 +7,11 @@
 <body>
     <div id="autocompleta">
         <form id="busqueda">
+            
             <div>
                 <input type="text" size="30" value="" id="quebuscas" onkeyup="escaneaDB(this.value);" onblur="rellenaNube();" name="quebuscas" />
             </div>
+            <a href="#" onclick="funciona();">funciona?</a>
             <div class="Nube" id="coincidencias" style="display: none;">
                 <img src="../imgs/upArrow.png" style="position: relative; top: -12px; left: 30px;" alt="upArrow" />
                 <div class="listaCoincidencias" id="listaCoincidenciasGenerada">

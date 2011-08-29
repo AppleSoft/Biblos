@@ -93,3 +93,7 @@ function esconde_filtros() {
     grafica_filtro('none');
     grafica_filtro2('none');
 }
+
+function funciona (){
+    window.alert('hola');
+}
