@@ -132,6 +132,17 @@ textarea {
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
+#oculto2{
+    position: absolute;
+    top: 80px;
+    left:490px;
+    width: 220px;
+    background:#fff;
+    padding:1em;
+    border:1px solid #eee;
+    -moz-border-radius:0.4em;
+    -khtml-border-radius:0.4em;
+}
 #autocompleta {
     position:absolute;
     top:45px;
@@ -164,9 +175,9 @@ textarea {
 
 #dropdown_filtros {
     position:absolute;
-    top:5em;
-    left:750px;
-    width: 250px;
+    top:20px;
+    left:760px;
+    width: 280px;
     background: white;
     border:2px dotted #ddd;
     padding: 5px;
@@ -176,42 +187,29 @@ textarea {
 input[type=checkbox], input[type=radio] { 
     width:1em; 
     height:1em; 
-
-    margin:0; }
-
-
+    margin:0; 
+}
 
 .Nube {
     position: relative;
-    left: 30px;
-    margin: 10px 0px 0px 0px;
-    width: 30em;
-    background-color: #212427;
-    -moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-    border: 2px solid #000;	
-    color: #fff;
+    margin: 5px 0px 0px 0px;
+    width: 220px;
+    background-color: transparent;
+    border: 1px dotted #00bfff;	
+    color: #00bfff;
 }
 
 .listaCoincidencias {
-    margin: 0px;
-    padding: 0px;
+    margin-bottom: 5px;
 }
 
-.listaCoincidencias li {
-
-    margin: 0px 0px 3px 0px;
-    padding: 3px;
-    cursor: pointer;
-}
-
-.listaCoincidencias li:hover {
+.listaCoincidencias:hover {
     background-color: #659CD8;
 }
 
 #menu {
     display:block;
-        color:black;
+    color:black;
     background-color: white;
     position: absolute;
     top: 5px;
@@ -223,3 +221,52 @@ A:visited {text-decoration:none;}
 A:active {text-decoration:none;}
 A:hover {text-decoration:underline;}
 
+.ac_results {
+	padding: 0px;
+        max-height: 200px;
+	border: 1px solid #7FB7FB;
+        overflow: hidden;
+	overflow-y: scroll;
+        background-color: #E0FFFF;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results iframe {
+	display:none;
+	display/**/:block;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+	width:3000px;
+	height:3000px;
+  
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+  
+}
+
+.ac_loading {
+	background : #AFD2FD url('../imgs/loader.gif') right center no-repeat;
+}
+
+.ac_over {
+	background-color: white;
+	color: black;
+}
