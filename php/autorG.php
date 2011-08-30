@@ -20,15 +20,16 @@ if (!isset($_SESSION['logeado'])
         <?php eligeplantilla($_SESSION['plantilla']); ?>
         <script src='../js/funciones.js' type='text/javascript'></script>
     </head>
-    <body>
-        <FORM ACTION="registrarautor.php" METHOD="post">
-            Nombre: <INPUT TYPE="text" NAME="nombre" SIZE=30 MAXLENGTH=30>
+    <body oncontextmenu="return false;">
+          
+        <FORM ACTION="autorP.php" METHOD="post" onSubmit="return validacampo(this);">
+            Nombre: <INPUT TYPE="text" NAME="nombre" SIZE=30 MAXLENGTH=30 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
             <BR>
-            Primer apellido: <INPUT TYPE="text" NAME="apellido1" SIZE=35 MAXLENGTH=35>
+            Primer apellido: <INPUT TYPE="text" NAME="apellido1" SIZE=35 MAXLENGTH=35 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
             <BR>
-            Segundo apellido(s): <INPUT TYPE="text" NAME="apellido2" SIZE=35 MAXLENGTH=35>
+            Segundo apellido(s): <INPUT TYPE="text" NAME="apellido2" SIZE=35 MAXLENGTH=35 autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>
             <BR>
-            Nacionalidad: <INPUT TYPE="text" NAME="nacionalidad" SIZE=30 MAXLENGTH=30>
+            Nacionalidad: <INPUT TYPE="text" NAME="nacionalidad" SIZE=30 MAXLENGTH=30 autocomplete="off" onKeyPress="return no_caracter_esp(this,event);" />
             <BR>
             <INPUT TYPE="submit" CLASS="boton" VALUE="Registrar">
         </FORM>

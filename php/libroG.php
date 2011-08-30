@@ -1,7 +1,7 @@
 <?php
 session_start();
- include "funciones.php";
-    include "defcon.php";
+include "funciones.php";
+include "defcon.php";
 if (!isset($_SESSION['logeado'])
         || $_SESSION['logeado'] != true) {
     header('Location: ../index.php');
@@ -14,22 +14,18 @@ if (!isset($_SESSION['logeado'])
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      	<link rel="stylesheet" type="text/css" href="css/screen.css">    
-        <title></title>
+<head>
+        <title>Biblos - Insertar nuevo libro</title>
+        <link rel='shortcut icon' type='image/x-icon' href='../imgs/favicon.ico'  />
+        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <script src='../js/funciones.js' type='text/javascript'></script>
     </head>
-    <body>
-        <?php
-            include "funciones.php";
-            include "defcon.php";
-        ?>
-        <FORM ACTION="libroP.php" METHOD="post">
+    <body oncontextmenu="return false;">
+        <FORM ACTION="libroP.php" METHOD="post" onSubmit="return validacampo(this);">
             <fieldset class="login">
             <legend>Datos nuevo libro</legend>
-            Titulo:<br> 
-            <INPUT TYPE="text" NAME="titulo" id="titulo">
-
+            Titulo:<br/>
+            <INPUT TYPE=text NAME=titulo class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
             <BR>
             Autor:<br>
             <?php
@@ -47,22 +43,22 @@ if (!isset($_SESSION['logeado'])
             ?>
             <br>
             ISBN:<br>
-            <INPUT TYPE="text" NAME="isbn">
+            <INPUT TYPE="text" NAME="isbn" autocomplete="off" onKeyPress="return solonumero(this,event);"/>
             <br>
             Fecha de publicaci&oacute;n [aaaa/mm/dd]: <br>
-            <INPUT TYPE="text" NAME="fecha_publicacion">
+            <INPUT TYPE="text" NAME="fecha_publicacion" autocomplete="off" onKeyPress="return solonumero(this,event);"/>
             <br>
             Fecha de adquisici&oacute;n [aaaa/mm/dd]: <br>
-            <INPUT TYPE="text" NAME="fecha_adquisicion">
+            <INPUT TYPE="text" NAME="fecha_adquisicion" autocomplete="off" onKeyPress="return solonumero(this,event);"/>
             <br>
             Numero de p&aacute;ginas: <br>
-            <INPUT TYPE="text" NAME="num_paginas">
+            <INPUT TYPE="text" NAME="num_paginas" autocomplete="off" onKeyPress="return solonumero(this,event);"/>
             <br>
             Sinopsis:<br>
-            <TEXTAREA NAME="sinopsis" COLS=40 ROWS=6></textarea>
+            <TEXTAREA NAME="sinopsis" COLS=40 ROWS=6 autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"></textarea>
             <br>
             Edici&oacute;n: <br>
-            <INPUT TYPE="text" NAME="edicion">
+            <INPUT TYPE="text" NAME="edicion" autocomplete="off" onKeyPress="return solonumero(this,event)"/>
             <br>
             Editorial:<br>
             <?php

@@ -14,13 +14,16 @@ if (!isset($_SESSION['logeado'])
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+ <title>Biblos - Insertar nueva editorial</title>
+        <link rel='shortcut icon' type='image/x-icon' href='imgs/favicon.ico'  />
+        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <script src='../js/funciones.js' type='text/javascript'></script>
     </head>
     <body>
-        <FORM ACTION="editorialP.php" METHOD="post">
-            Editorial : <INPUT TYPE="text" NAME="nombre_editorial" SIZE=45 MAXLENGTH=45>
+       
+        <FORM ACTION="editorialP.php" METHOD="post" onSubmit="return validacampo(this);">
+            Editorial : <INPUT TYPE="text" NAME="nombre_editorial" SIZE=45 MAXLENGTH=45 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
+           <br/>
             <input type="submit" value="Entrar" />
             <input type="reset" value="Borrar" />
         </form>

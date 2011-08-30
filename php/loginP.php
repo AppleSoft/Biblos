@@ -11,7 +11,6 @@
         include "funciones.php";
         include "defcon.php";
 
-
         $usuario = trim($_POST['nombre_usuario']);
         $pwd = trim($_POST['password']);
 

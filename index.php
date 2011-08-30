@@ -1,22 +1,27 @@
-<?php session_start(); ?>
+<?php session_start() ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <title>Login</title>
-      <link rel="stylesheet" type="text/css" href="css/screen.css"> 
-      <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"  />
+        <link rel="stylesheet" type="text/css" href="css/screen.css"> 
+        <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"  />
+        <script src="js/funciones.js" type="text/javascript"></script>
     </head>
-    <body>
-        <FORM ACTION="php/loginP.php" METHOD="post">
-            Usuario : <INPUT TYPE="text" NAME="nombre_usuario" SIZE=8 MAXLENGTH=8 /><br><BR>
-            Password: <INPUT TYPE="password" NAME="password" SIZE=8 MAXLENGTH=8 /><BR><BR>
+    <body oncontextmenu="return false;">
+        <FORM ACTION="php/loginP.php" METHOD="post" onSubmit="return validacampo(this);" >
+            Usuario : <INPUT TYPE="text" NAME="nombre_usuario" SIZE=8 MAXLENGTH=8 autocomplete="off" onKeyPress="return solonumero(this,event);"/><br><BR>
+            Password: <INPUT TYPE="password" NAME="password" SIZE=8 MAXLENGTH=8 autocomplete="off" /><BR><BR>
 
             <input type="submit" value="Entrar" />
             <input type="reset" value="Borrar" />
-             <?php 
-                if (isset($_GET['error'])) echo $_GET['error']; 
+            <?php
+            if (isset($_GET['error']))
+                echo $_GET['error'];
             ?>
         </form>
-            </body>
+    </body>
+
+   
+
 </html>
