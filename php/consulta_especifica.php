@@ -35,12 +35,9 @@ if (!isset($_SESSION['logeado'])
                 echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>||";
                 echo "<a href='modificaEditorialG.php'>Modificar editorial</a>||";
             }
-            echo "<a href='consulta_general.php'>Consulta la biblioteca</a>||";
+            echo "<a href='consulta_general.php' id='selecionado'>Consulta la biblioteca</a>||";
             ?>
             <a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a>
-            <?php
-            echo "||<a href='salida.php'>Logout</a>";
-            ?>
         </div>
         <?php
         $mipagina = $_SERVER['PHP_SELF'];
@@ -96,10 +93,13 @@ if (!isset($_SESSION['logeado'])
         </div>
 
         <div id="oculto2">
-            <!-- <?php include "auto.php" ?> -->
+            
         </div>
 
-
         <h1>Consulta con filtro</h1>
+        
+        <div id="pie">
+            <?php include "pie_pagina.php"; ?>
+        </div>
     </body>
 </html>

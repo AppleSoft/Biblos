@@ -208,13 +208,28 @@ input[type=checkbox], input[type=radio] {
 }
 
 #menu {
+    font-size: small;
     display:block;
     color:black;
     background-color: white;
     position: absolute;
     top: 5px;
-    -moz-border-radius:0.4em;
-    -khtml-border-radius:0.4em;
+}
+
+#pie {
+    position:absolute;
+    bottom: 5px;
+    font-size: small;
+    color:black;
+    background-color: white;
+}
+#logout {
+    position:absolute;
+    bottom:5px;
+    right:15px;
+font-size: small;
+    color:black;
+    background-color: white;
 }
 A:link {text-decoration:none;}
 A:visited {text-decoration:none;}
@@ -222,53 +237,53 @@ A:active {text-decoration:none;}
 A:hover {text-decoration:underline;}
 
 .ac_results {
-	padding: 0px;
-        max-height: 200px;
-	border: 1px solid #7FB7FB;
-        overflow: hidden;
-	overflow-y: scroll;
-        background-color: #E0FFFF;
+    padding: 0px;
+    max-height: 200px;
+    border: 1px solid #7FB7FB;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #E0FFFF;
 }
 
 .ac_results ul {
-	width: 100%;
-	list-style-position: outside;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .ac_results iframe {
-	display:none;
-	display/**/:block;
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:-1;
-	width:3000px;
-	height:3000px;
-  
+    display:none;
+    display/**/:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:3000px;
+    height:3000px;
+
 }
 
 .ac_results li {
-	margin: 0px;
-	padding: 2px 5px;
-	cursor: pointer;
-	display: block;
-	width: 100%;
-	font: menu;
-	font-size: 12px;
-	overflow: hidden;
-  
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font: menu;
+    font-size: 12px;
+    overflow: hidden;
+
 }
 
 .ac_loading {
-	background : #AFD2FD url('../imgs/loader.gif') right center no-repeat;
+    background : #AFD2FD url('../imgs/loader.gif') right center no-repeat;
 }
 
 .ac_over {
-	background-color: white;
-	color: black;
+    background-color: white;
+    color: black;
 }
 
 #selecionado {

@@ -217,15 +217,26 @@ input[type=checkbox], input[type=radio] {
 }
 
 #menu {
+    font-size: small;
     display:block;
     position: absolute;
     color:black;
     background-color: white;
     top: 5px;
-    -moz-border-radius:0.4em;
-    -khtml-border-radius:0.4em;
 }
 
+#pie {
+    position:absolute;
+    bottom: 5px;
+    font-size: small;
+    display:block;
+    color:black;
+    background-color: white;
+    position: absolute;
+}
+#logout {
+    float: right;    
+}
 A:link {text-decoration:none;}
 A:visited {text-decoration:none;}
 A:active {text-decoration:none;}
@@ -279,4 +290,10 @@ A:hover {text-decoration:underline;}
 .ac_over {
 	background-color: white;
 	color: black;
+}
+
+#selecionado {
+    font-weight: bold;
+    color: #000;
+    background-color: #B8860B;
 }
