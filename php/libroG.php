@@ -21,6 +21,23 @@ if (!isset($_SESSION['logeado'])
         <script src='../js/funciones.js' type='text/javascript'></script>
     </head>
     <body oncontextmenu="return false;">
+<div id="menu">
+        <?php
+        if ($tipousuario == 1) {
+            echo "<a href='libroG.php' id='selecionado'>Agregar un libro a la biblioteca</a> ||\n";
+            echo "<a href='modificaLibroG.php'>Modificar un libro</a> ||\n";
+            echo "<a href='autorG.php'>Agregar autor a la biblioteca</a> ||\n";
+            echo "<a href='modificaAutorG.php'>Modificar autor</a> ||\n";
+            echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a> ||\n";
+            echo "<a href='modificaEditorialG.php'>Modificar editorial</a> ||\n";
+        }
+        echo "<a href='consulta_general.php'>Consulta la biblioteca</a> ||\n";
+        ?>
+        <a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a>
+        <?php
+        echo " || <a href='salida.php'>Logout</a>\n";
+        ?>
+        </div>
         <FORM ACTION="libroP.php" METHOD="post" onSubmit="return validacampo(this);">
             <fieldset class="login">
             <legend>Datos nuevo libro</legend>

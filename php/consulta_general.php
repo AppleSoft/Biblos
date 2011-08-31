@@ -34,7 +34,7 @@ if (!isset($_SESSION['logeado'])
             echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a> ||\n";
             echo "<a href='modificaEditorialG.php'>Modificar editorial</a> ||\n";
         }
-        echo "<a href='consulta_general.php'>Consulta la biblioteca</a> ||\n";
+        echo "<a href='consulta_general.php' id='selecionado'>Consulta la biblioteca</a> ||\n";
         ?>
         <a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a>
         <?php

@@ -270,3 +270,8 @@ A:hover {text-decoration:underline;}
 	background-color: white;
 	color: black;
 }
+
+#selecionado {
+    font-weight: bold;
+    background: #ffdead;
+}

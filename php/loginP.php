@@ -3,8 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
+        <title>Bienvenid@ a Biblos</title>
     </head>
     <body>
         <?php
@@ -19,7 +18,7 @@
         $tipousuario= extraeCampo2("tipos_usuario_id_tipo_usuario", "usuario", "dni", $usuario, 'clave', $pwd);
         $plantilla_usuario=extraeCampo2("plantilla_id_plantilla", "usuario", "dni", $usuario, 'clave', $pwd);
         if (!$existe_usr) {
-            echo header("location: loginG.php?error=Usuario y/o clave erronea");
+            echo header("location: ../index.php?error=Usuario y/o clave erronea");
         } else {
             $_SESSION['logeado'] = TRUE;
             $_SESSION['usuario'] =$existe_usr;
