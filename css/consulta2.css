@@ -208,12 +208,12 @@ input[type=checkbox], input[type=radio] {
 }
 
 #menu {
+    position: absolute;
+    top: 5px;
     font-size: small;
     display:block;
     color:black;
     background-color: white;
-    position: absolute;
-    top: 5px;
 }
 
 #pie {
@@ -227,7 +227,7 @@ input[type=checkbox], input[type=radio] {
     position:absolute;
     bottom:5px;
     right:15px;
-font-size: small;
+    font-size: small;
     color:black;
     background-color: white;
 }
