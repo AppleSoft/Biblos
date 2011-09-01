@@ -10,14 +10,20 @@ function controlSesion() {
 
 function dibujaMenu() {
     if ($_SESSION['tipousuario'] == 1) {
-        echo "<a href='libroG.php'>Agregar un libro a la biblioteca</a>||";
-        echo "<a href='modificaLibroG.php'>Modificar un libro</a>||";
-        echo "<a href='autorG.php'>Agregar autor a la biblioteca</a>||";
-        echo "<a href='modificaAutorG.php'>Modificar autor</a>||";
-        echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a>||";
-        echo "<a href='modificaEditorialG.php'>Modificar editorial</a>||";
-    }
-    echo "<a href='consulta_general.php'>Consulta la biblioteca</a>||";
+        echo "<a href='libroG.php'>Agregar un libro a la biblioteca</a> || ";
+        echo "<a href='modificaLibroG.php'>Modificar un libro</a> || ";
+        echo "<a href='autorG.php'>Agregar autor a la biblioteca</a> || ";
+        echo "<a href='modificaAutorG.php'>Modificar autor</a> || ";
+        echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a> || ";
+        echo "<a href='modificaEditorialG.php'>Modificar editorial</a> || "; ?>
+
+<a href="javascript:;" onClick="window.open('menu_usuarios.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Gestion usuarios</a> ||
+<?php
+        }
+    echo "<a href='consulta_general.php'>Consulta la biblioteca</a> || ";
+?>
+<a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a>
+<?php
 }
 
 function rellenarCampos($ftabla, $orden) {
@@ -134,7 +140,7 @@ function qrgen($linkdata) {
     $filename = $PNG_TEMP_DIR . 'test.png';
 
     QRcode::png($linkdata, $filename, $errorCorrectionLevel, $matrixPointSize, 2);
-    echo '<img src="' . $PNG_WEB_DIR . basename($filename) . '" />';
+    echo "<a href='$linkdata'><img src='" . $PNG_WEB_DIR . basename($filename) . "' /></a>";
 }
 
 function eligeplantilla($plantilla_usuario) {

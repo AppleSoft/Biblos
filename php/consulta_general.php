@@ -16,7 +16,6 @@ conexion();
     <body>
         <div id="menu">
             <?php dibujaMenu(); ?>
-            <a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a>
         </div>    
         <?php
             include "fichaLibroGenerica.php";

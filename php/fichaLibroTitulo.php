@@ -36,21 +36,20 @@ while ($row = mysql_fetch_array($result)) {
     echo "Fecha pub: <input type='text' name='abc' value='$row[5]'><br>\n";
     echo "Fecha adq: <input type='text' name='abc' value='$row[6]'><br>\n";
     echo "Paginas: <input type='text' name='abc' value='$row[7]'><br>\n";
-    echo "Sinopsis: <input type='textarea' name='abc' value='$row[8]'><br>";
-    echo "Edicion: <input type='text' name='abc' value='$row[9]'><br>";
+    echo "Sinopsis: <input type='textarea' name='abc' value='$row[8]'><br>\n";
+    echo "Edicion: <input type='text' name='abc' value='$row[9]'><br>\n";
     echo "Editor: <input type='text' name='abc' value='" . buscarCampo('nombre_editorial', 'editorial', 'id_editorial', $row[11]) . "'><br>\n";
-    $fecha = date("Y/m/d-H:i:s");
     echo "<input type='hidden' name='usuario_dni' value='" . buscarCampo('dni', 'usuario', 'nombre_usuario', $usuario) . "'>\n"; //usuario ->dni
     echo "<input type='hidden' name='libro_categoria_id_categoria' value='$row[0]'>\n"; //categoria -> id_categoria 
     echo "<input type='hidden' name='libro_cod_apellido' value='$row[1]'>\n"; //libro -> cod_apellido
     echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>\n"; //libro -> cod_titulo
+    $fecha = date("Y/m/d-H:i:s");
     echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>\n"; //fecha y hora date("Ymd") date("H:i:s")
     echo "<div id='qr'>\n";
     $data = qrlink($row[4], $row[12]);
     qrgen($data);
     echo "</div>\n";
 }
-
 echo "<br>Se han encontrado <b>$total_resultados</b> libro(s) con tu criterio de busqueda<br>\n";
 echo "(Libro cuyo <b>$dondebuscas</b> contenga <b>$quebuscas</b>)<br>\n";
 if ($total_resultados > 0) {
@@ -73,7 +72,6 @@ if ($total_resultados > 0) {
     } else {
         $from = $pagina - 3;
     }
-
     for ($i = $from; $i <= $to; $i++) {
         if ($i == $total_resultados)
             $to = $total_resultados;
@@ -91,12 +89,11 @@ if ($total_resultados > 0) {
         echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_paginas>ultima >></a>";
     }
 }
+
 if ($tipousuario == 1)
     echo "<br><br><input type='submit' value='Modifica libro'/>\n";
 else
     echo "<br><br><input type='submit' value='Alquila libro'/>\n";
-
-
 echo "</form>\n";
-echo "</div\n";
+echo "</div>\n";
 ?>
