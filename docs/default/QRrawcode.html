@@ -1,453 +1,370 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class QRrawcode</title>
-			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name"><img src="../media/images/Class_logo.png"
-														alt=" Class"
-														title=" Class"
-														style="vertical-align: middle"> QRrawcode</h2>
-
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-					</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-		<p class="notes">
-			Located in <a class="field" href="_phpqrcode---phpqrcode.php.html">C:\xampp\php\phpdoc/phpqrcode/phpqrcode.php</a> (line <span class="field">2855</span>)
-		</p>
-		
-				
-		<pre></pre>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class QRrawcode</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
 	
-			</div>
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class QRrawcode
+</h2> (line <span class="linenumber">2855</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_phpqrcode---phpqrcode.php.html">C:\xampp\php\phpdoc/phpqrcode/phpqrcode.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
 
-
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-								</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																																																																																								<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$b1" title="details" class="var-name">$b1</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$blocks" title="details" class="var-name">$blocks</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$count" title="details" class="var-name">$count</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$datacode" title="details" class="var-name">$datacode</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$dataLength" title="details" class="var-name">$dataLength</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$ecccode" title="details" class="var-name">$ecccode</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$eccLength" title="details" class="var-name">$eccLength</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$rsblocks" title="details" class="var-name">$rsblocks</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$version" title="details" class="var-name">$version</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																								<div class="method-definition">
-					<img src="../media/images/Constructor.png" alt=" "/>
-											<span class="method-result">QRrawcode</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type"><a href="../default/QRinput.html">QRinput</a></span>&nbsp;<span class="var-name">$input</span>)
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#getCode" title="details" class="method-name">getCode</a>
-										()
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#init" title="details" class="method-name">init</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$spec</span>)
-									</div>
-											</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			
-<a name="var$b1" id="$b1"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$b1</span>
-						(line <span class="line-number">2864</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$b1" title="details" class="property"><strong>$b1</strong></a>
 </div>
-<a name="var$blocks" id="$blocks"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$blocks</span>
-						(line <span class="line-number">2859</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$blocks" title="details" class="property"><strong>$blocks</strong></a>
 </div>
-<a name="var$count" id="$count"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$count</span>
-						(line <span class="line-number">2861</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$count" title="details" class="property"><strong>$count</strong></a>
 </div>
-<a name="var$datacode" id="$datacode"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$datacode</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">2857</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$datacode" title="details" class="property"><strong>$datacode</strong></a>
 </div>
-<a name="var$dataLength" id="$dataLength"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$dataLength</span>
-						(line <span class="line-number">2862</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$dataLength" title="details" class="property"><strong>$dataLength</strong></a>
 </div>
-<a name="var$ecccode" id="$ecccode"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$ecccode</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">2858</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$ecccode" title="details" class="property"><strong>$ecccode</strong></a>
 </div>
-<a name="var$eccLength" id="$eccLength"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$eccLength</span>
-						(line <span class="line-number">2863</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$eccLength" title="details" class="property"><strong>$eccLength</strong></a>
 </div>
-<a name="var$rsblocks" id="$rsblocks"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$rsblocks</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">2860</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$rsblocks" title="details" class="property"><strong>$rsblocks</strong></a>
 </div>
-<a name="var$version" id="$version"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$version</span>
-						(line <span class="line-number">2856</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$version" title="details" class="property"><strong>$version</strong></a>
 </div>
-						
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">2867</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">QRrawcode</span>
-		<span class="method-name">
-			__construct
-		</span>
-					(<span class="var-type"><a href="../default/QRinput.html">QRinput</a></span>&nbsp;<span class="var-name">$input</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"><a href="../default/QRinput.html">QRinput</a></span>
-				<span class="var-name">$input</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodgetCode" id="getCode"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">getCode</span> (line <span class="line-number">2938</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			getCode
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodinit" id="init"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">init</span> (line <span class="line-number">2895</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			init
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$spec</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type">array</span>
-				<span class="var-name">$spec</span>			</li>
-				</ul>
-		
-			
-	</div>
-						
-		</div>
-	</div>
+<hr />
+<a name="var$b1" id="var$b1"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$b1</strong> (line <span class="linenumber">2864</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$blocks" id="var$blocks"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$blocks</strong> (line <span class="linenumber">2859</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$count" id="var$count"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$count</strong> (line <span class="linenumber">2861</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$datacode" id="var$datacode"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$datacode = array()</strong> (line <span class="linenumber">2857</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$dataLength" id="var$dataLength"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$dataLength</strong> (line <span class="linenumber">2862</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$ecccode" id="var$ecccode"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$ecccode = array()</strong> (line <span class="linenumber">2858</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$eccLength" id="var$eccLength"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$eccLength</strong> (line <span class="linenumber">2863</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$rsblocks" id="var$rsblocks"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$rsblocks = array()</strong> (line <span class="linenumber">2860</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$version" id="var$version"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$version</strong> (line <span class="linenumber">2856</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
 
-	
-	<p class="notes" id="credit">
-		Documentation generated on Wed, 31 Aug 2011 13:17:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">QRrawcode</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        (<span class="var-type"><a href="../default/QRinput.html">QRinput</a></span>&nbsp;<span class="var-name">$input</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodgetCode" title="details" class="method-name">getCode</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodinit" title="details" class="method-name">init</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$spec</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">2867</span>)
+ </h4> 
+<h4><i>QRrawcode</i> <strong>__construct(
+<a href="../default/QRinput.html">QRinput</a>
+$input)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong><a href="../default/QRinput.html">QRinput</a> $input</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodgetCode" id="methodgetCode"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method getCode</strong> (line <span class="linenumber">2938</span>)
+ </h4> 
+<h4><i>void</i> <strong>getCode(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodinit" id="methodinit"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method init</strong> (line <span class="linenumber">2895</span>)
+ </h4> 
+<h4><i>void</i> <strong>init(
+
+$spec)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong>array $spec</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Fri, 02 Sep 2011 10:59:05 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

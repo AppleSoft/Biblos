@@ -229,3 +229,19 @@ else
    return false;
     
 }
+
+$(function() {
+            var offset = $("#scroll").offset();
+            var topPadding = 15;
+            $(window).scroll(function() {
+                if ($("#scroll").height() < $(window).height() && $(window).scrollTop() > offset.top) { /* LINEA MODIFICADA POR ALEX PARA NO ANIMAR SI EL SIDEBAR ES MAYOR AL TAMAÑO DE PANTALLA */
+                    $("#scroll").stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $("#scroll").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });

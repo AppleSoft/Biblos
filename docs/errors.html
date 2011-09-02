@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>phpDocumentor Parser Errors and Warnings</title>
-			<link rel="stylesheet" href="media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-						<a href="#Post-parsing">Post-parsing</a><br>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>phpDocumentor Parser Errors and Warnings</title>
+  <link rel="stylesheet" href="media/stylesheet.css" />
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><a href="#Post-parsing">Post-parsing</a><br>
 <a href="#auto.php">auto.php</a><br>
 <a href="#autocomplete.php">autocomplete.php</a><br>
 <a href="#autorG.php">autorG.php</a><br>
@@ -16,11 +15,14 @@
 <a href="#auto_autor.php">auto_autor.php</a><br>
 <a href="#auto_categoria.php">auto_categoria.php</a><br>
 <a href="#auto_titulo.php">auto_titulo.php</a><br>
+<a href="#auto_usr.php">auto_usr.php</a><br>
+<a href="#baja_usuarios.php">baja_usuarios.php</a><br>
 <a href="#conexion.php">conexion.php</a><br>
 <a href="#config.php">config.php</a><br>
 <a href="#consulta_criterios.php">consulta_criterios.php</a><br>
 <a href="#consulta_especifica.php">consulta_especifica.php</a><br>
 <a href="#consulta_general.php">consulta_general.php</a><br>
+<a href="#consulta_usuarios.php">consulta_usuarios.php</a><br>
 <a href="#control_alquileres.php">control_alquileres.php</a><br>
 <a href="#crea_usr_db.php">crea_usr_db.php</a><br>
 <a href="#defcon.php">defcon.php</a><br>
@@ -31,6 +33,10 @@
 <a href="#editorialP.php">editorialP.php</a><br>
 <a href="#encriptado.php">encriptado.php</a><br>
 <a href="#error.php">error.php</a><br>
+<a href="#fichaLibroAutor.php">fichaLibroAutor.php</a><br>
+<a href="#fichaLibroCategoria.php">fichaLibroCategoria.php</a><br>
+<a href="#fichaLibroGenerica.php">fichaLibroGenerica.php</a><br>
+<a href="#fichaLibroTitulo.php">fichaLibroTitulo.php</a><br>
 <a href="#form.php">form.php</a><br>
 <a href="#funciones.php">funciones.php</a><br>
 <a href="#index.php">index.php</a><br>
@@ -42,14 +48,18 @@
 <a href="#main.php">main.php</a><br>
 <a href="#menu.php">menu.php</a><br>
 <a href="#menuG.php">menuG.php</a><br>
+<a href="#menu_usuarios.php">menu_usuarios.php</a><br>
 <a href="#merge.php">merge.php</a><br>
 <a href="#merged_config.php">merged_config.php</a><br>
 <a href="#merged_header.php">merged_header.php</a><br>
 <a href="#modifica.php">modifica.php</a><br>
+<a href="#modificaAutorG.php">modificaAutorG.php</a><br>
+<a href="#modificaEditorialG.php">modificaEditorialG.php</a><br>
 <a href="#modificaLibroG.php">modificaLibroG.php</a><br>
 <a href="#noisses.php">noisses.php</a><br>
 <a href="#phpqrcode.php">phpqrcode.php</a><br>
 <a href="#php_paging.php">php_paging.php</a><br>
+<a href="#pie_pagina.php">pie_pagina.php</a><br>
 <a href="#plantilla.php">plantilla.php</a><br>
 <a href="#plantillaP.php">plantillaP.php</a><br>
 <a href="#provaqr.php">provaqr.php</a><br>
@@ -72,65 +82,24 @@
 <a href="#testG.php">testG.php</a><br>
 <a href="#test_plantilla.php">test_plantilla.php</a><br>
 <a href="#usuarioG.php">usuarioG.php</a><br>
+<a href="#visualiza_usuarios.php">visualiza_usuarios.php</a><br>
 <a name="Post-parsing"></a>
 <h1>Post-parsing</h1>
 <h2>Warnings:</h2><br>
 <b>Warning</b> - 
-duplicate class element "FrameFiller" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "QRtools" in file C:\xampp\htdocs\Biblos\phpqrcode\qrtools.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "QRspec" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "QRimage" in file C:\xampp\htdocs\Biblos\phpqrcode\qrimage.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "QRrawcode" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "QRrsblock" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
+duplicate class element "QRrs" in file C:\xampp\htdocs\Biblos\phpqrcode\qrrscode.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate class element "QRrsItem" in file C:\xampp\htdocs\Biblos\phpqrcode\qrrscode.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate class element "QRrs" in file C:\xampp\htdocs\Biblos\phpqrcode\qrrscode.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
 duplicate class element "QRmask" in file C:\xampp\htdocs\Biblos\phpqrcode\qrmask.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate class element "QRinputItem" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
+duplicate class element "QRrsblock" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate class element "QRcode" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_PNG_MAXIMUM_SIZE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_PNG_MAXIMUM_SIZE" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_IMAGE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrimage.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_LOG_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_LOG_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "qrstr" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_MODE_KANJI" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_CACHE_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
+duplicate class element "QRrawcode" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate class element "QRsplit" in file C:\xampp\htdocs\Biblos\phpqrcode\qrsplit.php will be ignored.
@@ -139,7 +108,43 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 duplicate class element "QRbitstream" in file C:\xampp\htdocs\Biblos\phpqrcode\qrbitstream.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
+duplicate class element "QRspec" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "QRimage" in file C:\xampp\htdocs\Biblos\phpqrcode\qrimage.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "QRinputItem" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "QRinput" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "FrameFiller" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
 duplicate class element "QRencode" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "QRtools" in file C:\xampp\htdocs\Biblos\phpqrcode\qrtools.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_LOG_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_PNG_MAXIMUM_SIZE" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_IMAGE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrimage.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_ECLEVEL_L" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_LOG_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_CACHE_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate function element "qrgen" in file C:\xampp\htdocs\Biblos\phpqrcode\provaqr.php will be ignored.
@@ -148,67 +153,25 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 duplicate define element "QR_MODE_AN" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
+duplicate define element "QRCAP_WIDTH" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
 duplicate define element "QR_CACHE_DIR" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate define element "QR_CACHEABLE" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "QR_FORMAT_TEXT" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_FORMAT_PNG" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
 duplicate define element "QR_CACHEABLE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "QR_ECLEVEL_L" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+duplicate define element "N1" in file C:\xampp\htdocs\Biblos\phpqrcode\qrmask.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "QR_ECLEVEL_M" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QRCAP_WORDS" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
+duplicate define element "MAX_STRUCTURED_SYMBOLS" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate define element "N2" in file C:\xampp\htdocs\Biblos\phpqrcode\qrmask.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate class element "QRinput" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QRCAP_WIDTH" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QRSPEC_WIDTH_MAX" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_ECLEVEL_Q" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_ECLEVEL_H" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QRSPEC_VERSION_MAX" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QRCAP_REMINDER" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QRCAP_EC" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_FIND_FROM_RANDOM" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_FIND_FROM_RANDOM" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_FIND_BEST_MASK" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_FIND_BEST_MASK" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate define element "N3" in file C:\xampp\htdocs\Biblos\phpqrcode\qrmask.php will be ignored.
@@ -217,31 +180,79 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 duplicate define element "N4" in file C:\xampp\htdocs\Biblos\phpqrcode\qrmask.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
+duplicate define element "STRUCTURE_HEADER_BITS" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QRCAP_EC" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "qrstr" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "QRcode" in file C:\xampp\htdocs\Biblos\phpqrcode\qrencode.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QRCAP_WORDS" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QRCAP_REMINDER" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_FIND_BEST_MASK" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_FIND_BEST_MASK" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_MODE_KANJI" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_MODE_8" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_MODE_STRUCTURE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_FORMAT_TEXT" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_FORMAT_PNG" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_MODE_NUM" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_MODE_NUL" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_FIND_FROM_RANDOM" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "QR_FIND_FROM_RANDOM" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
 duplicate define element "QR_DEFAULT_MASK" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
 duplicate define element "QR_DEFAULT_MASK" in file C:\xampp\htdocs\Biblos\phpqrcode\tools\merged_config.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "MAX_STRUCTURED_SYMBOLS" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
+duplicate define element "QR_ECLEVEL_M" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "STRUCTURE_HEADER_BITS" in file C:\xampp\htdocs\Biblos\phpqrcode\qrinput.php will be ignored.
+duplicate define element "QR_PNG_MAXIMUM_SIZE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconfig.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "N1" in file C:\xampp\htdocs\Biblos\phpqrcode\qrmask.php will be ignored.
+duplicate define element "QRSPEC_WIDTH_MAX" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "QR_MODE_8" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+duplicate define element "QR_ECLEVEL_Q" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "QR_MODE_NUL" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+duplicate define element "QRSPEC_VERSION_MAX" in file C:\xampp\htdocs\Biblos\phpqrcode\qrspec.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <b>Warning</b> - 
-duplicate define element "QR_MODE_NUM" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
-Use an @ignore tag on the original if you want this case to be documented.<br>
-<b>Warning</b> - 
-duplicate define element "QR_MODE_STRUCTURE" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
+duplicate define element "QR_ECLEVEL_H" in file C:\xampp\htdocs\Biblos\phpqrcode\qrconst.php will be ignored.
 Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="alquila.php"></a>
 <h1>alquila.php</h1>
@@ -258,7 +269,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="autorG.php"></a>
 <h1>autorG.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 54</b> - File "C:\xampp\htdocs\Biblos\php\autorG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 37</b> - File "C:\xampp\htdocs\Biblos\php\autorG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="autorP.php"></a>
 <h1>autorP.php</h1>
 <h2>Warnings:</h2><br>
@@ -275,6 +286,14 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>auto_titulo.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 15</b> - File "C:\xampp\htdocs\Biblos\php\auto_titulo.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="auto_usr.php"></a>
+<h1>auto_usr.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - File "C:\xampp\htdocs\Biblos\php\auto_usr.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="baja_usuarios.php"></a>
+<h1>baja_usuarios.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 135</b> - File "C:\xampp\htdocs\Biblos\php\baja_usuarios.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="conexion.php"></a>
 <h1>conexion.php</h1>
 <h2>Warnings:</h2><br>
@@ -290,11 +309,15 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="consulta_especifica.php"></a>
 <h1>consulta_especifica.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 104</b> - File "C:\xampp\htdocs\Biblos\php\consulta_especifica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 71</b> - File "C:\xampp\htdocs\Biblos\php\consulta_especifica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="consulta_general.php"></a>
 <h1>consulta_general.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 161</b> - File "C:\xampp\htdocs\Biblos\php\consulta_general.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 40</b> - File "C:\xampp\htdocs\Biblos\php\consulta_general.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="consulta_usuarios.php"></a>
+<h1>consulta_usuarios.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 135</b> - File "C:\xampp\htdocs\Biblos\php\consulta_usuarios.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="control_alquileres.php"></a>
 <h1>control_alquileres.php</h1>
 <h2>Warnings:</h2><br>
@@ -318,11 +341,11 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="dropdown_titulo.php"></a>
 <h1>dropdown_titulo.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 49</b> - File "C:\xampp\htdocs\Biblos\php\dropdown_titulo.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 47</b> - File "C:\xampp\htdocs\Biblos\php\dropdown_titulo.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="editorialG.php"></a>
 <h1>editorialG.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 46</b> - File "C:\xampp\htdocs\Biblos\php\editorialG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 28</b> - File "C:\xampp\htdocs\Biblos\php\editorialG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="editorialP.php"></a>
 <h1>editorialP.php</h1>
 <h2>Warnings:</h2><br>
@@ -335,6 +358,22 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>error.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 6</b> - File "C:\xampp\htdocs\Biblos\php\error.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="fichaLibroAutor.php"></a>
+<h1>fichaLibroAutor.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 113</b> - File "C:\xampp\htdocs\Biblos\php\fichaLibroAutor.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="fichaLibroCategoria.php"></a>
+<h1>fichaLibroCategoria.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 102</b> - File "C:\xampp\htdocs\Biblos\php\fichaLibroCategoria.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="fichaLibroGenerica.php"></a>
+<h1>fichaLibroGenerica.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 102</b> - File "C:\xampp\htdocs\Biblos\php\fichaLibroGenerica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="fichaLibroTitulo.php"></a>
+<h1>fichaLibroTitulo.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 98</b> - File "C:\xampp\htdocs\Biblos\php\fichaLibroTitulo.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="form.php"></a>
 <h1>form.php</h1>
 <h2>Warnings:</h2><br>
@@ -342,7 +381,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="funciones.php"></a>
 <h1>funciones.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 417</b> - File "C:\xampp\htdocs\Biblos\php\funciones.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 150</b> - File "C:\xampp\htdocs\Biblos\php\funciones.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="index.php"></a>
 <h1>index.php</h1>
 <h2>Warnings:</h2><br>
@@ -351,7 +390,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="libroG.php"></a>
 <h1>libroG.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 89</b> - File "C:\xampp\htdocs\Biblos\php\libroG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 72</b> - File "C:\xampp\htdocs\Biblos\php\libroG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="libroP.php"></a>
 <h1>libroP.php</h1>
 <h2>Warnings:</h2><br>
@@ -379,7 +418,11 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="menuG.php"></a>
 <h1>menuG.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 40</b> - File "C:\xampp\htdocs\Biblos\php\menuG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 26</b> - File "C:\xampp\htdocs\Biblos\php\menuG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="menu_usuarios.php"></a>
+<h1>menu_usuarios.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 23</b> - File "C:\xampp\htdocs\Biblos\php\menu_usuarios.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="merge.php"></a>
 <h1>merge.php</h1>
 <h2>Warnings:</h2><br>
@@ -396,10 +439,18 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>modifica.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 75</b> - File "C:\xampp\htdocs\Biblos\php\modifica.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="modificaAutorG.php"></a>
+<h1>modificaAutorG.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 98</b> - File "C:\xampp\htdocs\Biblos\php\modificaAutorG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="modificaEditorialG.php"></a>
+<h1>modificaEditorialG.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 94</b> - File "C:\xampp\htdocs\Biblos\php\modificaEditorialG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="modificaLibroG.php"></a>
 <h1>modificaLibroG.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 123</b> - File "C:\xampp\htdocs\Biblos\php\modificaLibroG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 113</b> - File "C:\xampp\htdocs\Biblos\php\modificaLibroG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="noisses.php"></a>
 <h1>noisses.php</h1>
 <h2>Warnings:</h2><br>
@@ -428,6 +479,10 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>php_paging.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 116</b> - File "C:\xampp\htdocs\Biblos\php\php_paging.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="pie_pagina.php"></a>
+<h1>pie_pagina.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 6</b> - File "C:\xampp\htdocs\Biblos\php\pie_pagina.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="plantilla.php"></a>
 <h1>plantilla.php</h1>
 <h2>Warnings:</h2><br>
@@ -435,7 +490,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="plantillaP.php"></a>
 <h1>plantillaP.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 17</b> - File "C:\xampp\htdocs\Biblos\php\plantillaP.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 18</b> - File "C:\xampp\htdocs\Biblos\php\plantillaP.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="provaqr.php"></a>
 <h1>provaqr.php</h1>
 <h2>Warnings:</h2><br>
@@ -516,7 +571,7 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <a name="salida.php"></a>
 <h1>salida.php</h1>
 <h2>Warnings:</h2><br>
-<b>Warning on line 25</b> - File "C:\xampp\htdocs\Biblos\php\salida.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 37</b> - File "C:\xampp\htdocs\Biblos\php\salida.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
 <a name="test.php"></a>
 <h1>test.php</h1>
 <h2>Warnings:</h2><br>
@@ -533,8 +588,13 @@ Use an @ignore tag on the original if you want this case to be documented.<br>
 <h1>usuarioG.php</h1>
 <h2>Warnings:</h2><br>
 <b>Warning on line 22</b> - File "C:\xampp\htdocs\Biblos\php\usuarioG.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
-	<p class="notes" id="credit">
-		Documentation generated on Wed, 31 Aug 2011 13:17:32 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</body>
+<a name="visualiza_usuarios.php"></a>
+<h1>visualiza_usuarios.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 135</b> - File "C:\xampp\htdocs\Biblos\php\visualiza_usuarios.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+	<div id="credit">
+		<hr />
+		Documentation generated on Fri, 02 Sep 2011 10:59:08 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

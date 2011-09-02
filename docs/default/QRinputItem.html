@@ -1,502 +1,421 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs For Class QRinputItem</title>
-			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="class-name"><img src="../media/images/Class_logo.png"
-														alt=" Class"
-														title=" Class"
-														style="vertical-align: middle"> QRinputItem</h2>
-
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-						
-					</div>
-	<div class="info-box-body">
-        		<!-- ========== Info from phpDoc block ========= -->
-		<p class="notes">
-			Located in <a class="field" href="_phpqrcode---phpqrcode.php.html">C:\xampp\php\phpdoc/phpqrcode/phpqrcode.php</a> (line <span class="field">1044</span>)
-		</p>
-		
-				
-		<pre></pre>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs For Class QRinputItem</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
 	
-			</div>
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><!-- Start of Class Data -->
+<h2>
+	Class QRinputItem
+</h2> (line <span class="linenumber">1044</span>)
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ));
+</script>
+
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<pre>
+</pre>
+<p>
+	<b><i>Located in File: <a href="_phpqrcode---phpqrcode.php.html">C:\xampp\php\phpdoc/phpqrcode/phpqrcode.php</a></i></b><br>
+</p>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+<br /><hr />
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
 
-
-
-	<a name="sec-var-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variable Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
-							| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-								</div>
-		<div class="info-box-body">
-			<div class="var-summary">
-																																																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$bstream" title="details" class="var-name">$bstream</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$data" title="details" class="var-name">$data</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$mode" title="details" class="var-name">$mode</a>
-				</div>
-																<div class="var-title">
-					<img src="../media/images/Variable.png" alt=" " />
-					<span class="var-type">mixed</span>
-					<a href="#$size" title="details" class="var-name">$size</a>
-				</div>
-											</div>
-		</div>
-	</div>
-
-	<a name="sec-method-summary"></a>
-	<div class="info-box">
-		<div class="info-box-title">Method Summary</span></div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-				 
-				|
-						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
-		</div>
-		<div class="info-box-body">			
-			<div class="method-summary">
-																																																																																<div class="method-definition">
-					<img src="../media/images/Constructor.png" alt=" "/>
-											<span class="method-result">QRinputItem</span>
-										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$size</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$bstream</span> = <span class="var-default">null</span>])
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#encodeBitStream" title="details" class="method-name">encodeBitStream</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#encodeMode8" title="details" class="method-name">encodeMode8</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#encodeModeAn" title="details" class="method-name">encodeModeAn</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#encodeModeKanji" title="details" class="method-name">encodeModeKanji</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#encodeModeNum" title="details" class="method-name">encodeModeNum</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#encodeModeStructure" title="details" class="method-name">encodeModeStructure</a>
-										()
-									</div>
-																<div class="method-definition">
-					<img src="../media/images/Method.png" alt=" "/>
-											<span class="method-result">void</span>
-										<a href="#estimateBitStreamSizeOfEntry" title="details" class="method-name">estimateBitStreamSizeOfEntry</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-									</div>
-											</div>
-		</div>
-	</div>		
-
-	<a name="sec-vars"></a>
-	<div class="info-box">
-		<div class="info-box-title">Variables</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
-						
-			
-										| 
-									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
-							
-					</div>
-		<div class="info-box-body">
-			
-<a name="var$bstream" id="$bstream"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$bstream</span>
-						(line <span class="line-number">1049</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<h2 class="tab">Class Variables</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$bstream" title="details" class="property"><strong>$bstream</strong></a>
 </div>
-<a name="var$data" id="$data"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$data</span>
-						(line <span class="line-number">1048</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$data" title="details" class="property"><strong>$data</strong></a>
 </div>
-<a name="var$mode" id="$mode"><!-- --></A>
-<div class="oddrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$mode</span>
-						(line <span class="line-number">1046</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$mode" title="details" class="property"><strong>$mode</strong></a>
 </div>
-<a name="var$size" id="$size"><!-- --></A>
-<div class="evenrow">
-
-	<div class="var-header">
-		<img src="../media/images/Variable.png" />
-		<span class="var-title">
-			<span class="var-type">mixed</span>
-			<span class="var-name">$size</span>
-						(line <span class="line-number">1047</span>)
-		</span>
-	</div>
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	
-		
-		
-
+<div class="var-title">
+    <span class="var-type">mixed</span>
+    <a href="#var$size" title="details" class="property"><strong>$size</strong></a>
 </div>
-						
-		</div>
-	</div>
-	
-	<a name="sec-methods"></a>
-	<div class="info-box">
-		<div class="info-box-title">Methods</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
-														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
-						
-		</div>
-		<div class="info-box-body">
-			<A NAME='method_detail'></A>
-<a name="method__construct" id="__construct"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">1051</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">QRinputItem</span>
-		<span class="method-name">
-			__construct
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$size</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$bstream</span> = <span class="var-default">null</span>])
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$mode</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$size</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$data</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$bstream</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencodeBitStream" id="encodeBitStream"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">encodeBitStream</span> (line <span class="line-number">1236</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			encodeBitStream
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$version</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencodeMode8" id="encodeMode8"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">encodeMode8</span> (line <span class="line-number">1137</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			encodeMode8
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$version</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencodeModeAn" id="encodeModeAn"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">encodeModeAn</span> (line <span class="line-number">1107</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			encodeModeAn
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$version</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencodeModeKanji" id="encodeModeKanji"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">encodeModeKanji</span> (line <span class="line-number">1158</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			encodeModeKanji
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$version</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencodeModeNum" id="encodeModeNum"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">encodeModeNum</span> (line <span class="line-number">1071</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			encodeModeNum
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$version</span>			</li>
-				</ul>
-		
-			
-	</div>
-<a name="methodencodeModeStructure" id="encodeModeStructure"><!-- --></a>
-<div class="oddrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">encodeModeStructure</span> (line <span class="line-number">1190</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			encodeModeStructure
-		</span>
-				()
-			</div>
-	
-		
-			
-	</div>
-<a name="methodestimateBitStreamSizeOfEntry" id="estimateBitStreamSizeOfEntry"><!-- --></a>
-<div class="evenrow">
-	
-	<div class="method-header">
-		<img src="../media/images/Method.png" />
-		<span class="method-title">estimateBitStreamSizeOfEntry</span> (line <span class="line-number">1209</span>)
-	</div> 
-	
-	<!-- ========== Info from phpDoc block ========= -->
-	<ul class="tags">
-				<li><span class="field">access:</span> public</li>
-			</ul>
-	
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			estimateBitStreamSizeOfEntry
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
-			</div>
-	
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$version</span>			</li>
-				</ul>
-		
-			
-	</div>
-						
-		</div>
-	</div>
+<hr />
+<a name="var$bstream" id="var$bstream"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$bstream</strong> (line <span class="linenumber">1049</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$data" id="var$data"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$data</strong> (line <span class="linenumber">1048</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$mode" id="var$mode"><!-- --></A>
+<div style="background='#ffffff'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$mode</strong> (line <span class="linenumber">1046</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<a name="var$size" id="var$size"><!-- --></A>
+<div style="background='#eeeeee'">
+<h4>
+<img src="../media/images/PublicProperty.gif" border="0" /> <strong class="property">$size</strong> (line <span class="linenumber">1047</span>)
+ </h4>
+<h4>Data type : mixed</h4>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+		<li><strong>access:</strong> - public</li>
+	</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+</div>
+<div class="tab-page" id="constantsTabpage">
 
-	
-	<p class="notes" id="credit">
-		Documentation generated on Wed, 31 Aug 2011 13:17:28 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+<h2 class="tab">Class Constants</h2>
+<!-- ============ VARIABLE DETAIL =========== -->
+<strong>Summary:</strong><br />
+<hr />
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "constantsTabpage" ) );</script>
+</div>
+<div class="tab-page" id="tabPage2">
+<h2 class="tab">Method Detail</h2>
+<!-- ============ METHOD DETAIL =========== -->
+<strong>Summary:</strong><br />
+<div class="method-summary">
+    <div class="method-definition">
+            <span class="method-result">QRinputItem</span>
+        <a href="#method__construct" title="details" class="method-name">__construct</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$mode</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$size</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$bstream</span> = <span class="var-default">null</span>])
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodencodeBitStream" title="details" class="method-name">encodeBitStream</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodencodeMode8" title="details" class="method-name">encodeMode8</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodencodeModeAn" title="details" class="method-name">encodeModeAn</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodencodeModeKanji" title="details" class="method-name">encodeModeKanji</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodencodeModeNum" title="details" class="method-name">encodeModeNum</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodencodeModeStructure" title="details" class="method-name">encodeModeStructure</a>
+        ()
+        </div>
+    <div class="method-definition">
+            <span class="method-result">void</span>
+        <a href="#methodestimateBitStreamSizeOfEntry" title="details" class="method-name">estimateBitStreamSizeOfEntry</a>
+        (<span class="var-type"></span>&nbsp;<span class="var-name">$version</span>)
+        </div>
+</div>
+<hr />
+<A NAME='method_detail'></A>
+
+
+<a name="method__construct" id="method__construct"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/Constructor.gif" border="0" /> <strong class="method">Constructor __construct</strong> (line <span class="linenumber">1051</span>)
+ </h4> 
+<h4><i>QRinputItem</i> <strong>__construct(
+
+$mode, 
+$size, 
+$data, [
+$bstream = null])</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $mode</strong>: </li>
+			<li><strong> $size</strong>: </li>
+			<li><strong> $data</strong>: </li>
+			<li><strong> $bstream</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencodeBitStream" id="methodencodeBitStream"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeBitStream</strong> (line <span class="linenumber">1236</span>)
+ </h4> 
+<h4><i>void</i> <strong>encodeBitStream(
+
+$version)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $version</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencodeMode8" id="methodencodeMode8"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeMode8</strong> (line <span class="linenumber">1137</span>)
+ </h4> 
+<h4><i>void</i> <strong>encodeMode8(
+
+$version)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $version</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencodeModeAn" id="methodencodeModeAn"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeModeAn</strong> (line <span class="linenumber">1107</span>)
+ </h4> 
+<h4><i>void</i> <strong>encodeModeAn(
+
+$version)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $version</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencodeModeKanji" id="methodencodeModeKanji"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeModeKanji</strong> (line <span class="linenumber">1158</span>)
+ </h4> 
+<h4><i>void</i> <strong>encodeModeKanji(
+
+$version)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $version</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencodeModeNum" id="methodencodeModeNum"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeModeNum</strong> (line <span class="linenumber">1071</span>)
+ </h4> 
+<h4><i>void</i> <strong>encodeModeNum(
+
+$version)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $version</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodencodeModeStructure" id="methodencodeModeStructure"><!-- --></a>
+<div style="background='#ffffff'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method encodeModeStructure</strong> (line <span class="linenumber">1190</span>)
+ </h4> 
+<h4><i>void</i> <strong>encodeModeStructure(
+)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<a name="methodestimateBitStreamSizeOfEntry" id="methodestimateBitStreamSizeOfEntry"><!-- --></a>
+<div style="background='#eeeeee'"><h4>
+<img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">Method estimateBitStreamSizeOfEntry</strong> (line <span class="linenumber">1209</span>)
+ </h4> 
+<h4><i>void</i> <strong>estimateBitStreamSizeOfEntry(
+
+$version)</strong></h4>
+
+	<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $version</strong>: </li>
+		</ul>
+		
+	<h4>Info</h4>
+	<ul>
+			<li><strong>access</strong> - public</li>
+		</ul>
+</div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script></div>
+<div class="tab-page" id="iVars">
+<h2 class="tab">Inherited Variables</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iVars" ) );</script>
+<!-- =========== VAR INHERITED SUMMARY =========== -->
+<A NAME='var_inherited_summary'><!-- --></A>
+<h3>Inherited Class Variable Summary</h3>
+
+	</div>
+<div class="tab-page" id="iMethods">
+<h2 class="tab">Inherited Methods</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "iMethods" ) );</script>
+<!-- =========== INHERITED METHOD SUMMARY =========== -->
+<A NAME='functions_inherited'><!-- --></A>
+<h3>Inherited Method Summary</h3>
+
+	</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Fri, 02 Sep 2011 10:59:05 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</div>
+</body>
 </html>

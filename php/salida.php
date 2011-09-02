@@ -1,26 +1,38 @@
-<?php 
+<?php
 session_start();
 
-$_SESSION['dni']="";
+$_SESSION['dni'] = "";
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="shortcut icon" type="image/x-icon" href="../imgs/favicon.ico"  />
-        <title></title>
+        <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico"  />
+        <title>Hasta la vista, baby</title>
+        <style type="text/css">
+            body
+            {
+                background-image: url("../imgs/libroback.jpg");
+                background-repeat: no-repeat;
+                background-position: center 200px;
+            }
+        </style>
     </head>
     <body>
+
         <?php
-        echo "<h1>Gracias <b>".$_SESSION['usuario']."</b> por utilizar nuestros servicios</h1>";
+        echo "<div align=center>";
+        echo "<h1>Gracias <b>" . $_SESSION['usuario'] . "</b> por utilizar nuestros servicios</h1>";
         echo "<h3>Logout executado con exito";
-        $_SESSION['usuario']="";
-        $_SESSION['logeado']="";
-        $_SESSION['dni']="";
+        echo "</div>";
+        $_SESSION['usuario'] = "";
+        $_SESSION['logeado'] = "";
+        $_SESSION['dni'] = "";
         $_SESSION['filtracion'] = "";
         $_SESSION['quebuscas'] = "";
         session_destroy();
-        header( 'refresh: 5; url=../index.php' );
+        header('refresh: 5; url=../index.php');
         ?>
+
     </body>
 </html>

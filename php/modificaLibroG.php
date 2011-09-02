@@ -1,34 +1,20 @@
 <?php
 session_start();
- include "funciones.php";
-    include "defcon.php";
-if (!isset($_SESSION['logeado'])
-        || $_SESSION['logeado'] != true) {
-    header('Location: ../index.php');
-    exit;
-} else {
-    $usuario = $_SESSION['usuario'];
-    $tipousuario = $_SESSION['tipousuario'];
-    $usrdni = $_SESSION['dni'];
-}
+include "funciones.php";
+controlSesion();
+conexion();
 ?>
 <!DOCTYPE html>
 <html>
-    <?php 
-    include "funciones.php";
-    include "defcon.php";
-
-    $usrdni=$_SESSION['dni'];
-    $queryplantilla= "SELECT plantilla_id_plantilla FROM usuario WHERE dni='$usrdni'";
-    $id=mysql_query($queryplantilla);
-    while ($row = mysql_fetch_array($id)) {
-    eligeplantilla($row[0]);
-    }
-    ?>
+    <head>
+        <title>Biblos</title>
+        <?php eligeplantilla($_SESSION['plantilla']); ?>
+    </head>
     <body>
-
+        <div id="menu">
+            <?php dibujaMenu(); ?>
+        </div>   
         <?php
-        
         $mipagina = $_SERVER['PHP_SELF'];
         $usuario = $_SESSION['usuario'];
         $dni = $_SESSION['dni'];
@@ -114,11 +100,15 @@ if (!isset($_SESSION['logeado'])
             echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_libros>ultima >></a>";
         }
 
-        echo "<br><br><input type='submit' value='Alquila libro'/>";
+        echo "<br><br><input type='submit' value='Modifica libro'/>";
 
         echo "</form>";
         mysql_close();
         ?>
-
+        <h1>Modifica libros en catalogo</h1>
+        <div id="pie">
+            <?php include "pie_pagina.php"; ?>
+        </div>
+        <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
     </body>
 </html>

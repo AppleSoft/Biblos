@@ -1,422 +1,361 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-		<head>
-			<!-- template designed by Marco Von Ballmoos -->
-			<title>Docs for page funciones.php</title>
-			<link rel="stylesheet" href="../media/stylesheet.css" />
-			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
-		</head>
-		<body>
-			<div class="page-body">			
-<h2 class="file-name"><img src="../media/images/Page_logo.png" alt="File" style="vertical-align: middle">C:\xampp\php\phpdoc/php/funciones.php</h2>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Docs for page funciones.php</title>
+  <link rel="stylesheet" href="../media/stylesheet.css" />
+  <script src="../media/lib/classTree.js"></script>
+<link id="webfx-tab-style-sheet" type="text/css" rel="stylesheet" href="../media/lib/tab.webfx.css" />
+<script type="text/javascript" src="../media/lib/tabpane.js"></script>
+  <script language="javascript" type="text/javascript" src="../media/lib/ua.js"></script>
+<script language="javascript" type="text/javascript">
+	var imgPlus = new Image();
+	var imgMinus = new Image();
+	imgPlus.src = "../media/images/plus.gif";
+	imgMinus.src = "../media/images/minus.gif";
+	
+	function showNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgMinus.src;
+		oTable.style.display = "block";
+	}
+	
+	function hideNode(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+				var oImg = document.layers["img" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+				var oImg = document.all["img" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+				var oImg = document.getElementById("img" + Node);
+        		break;
+        }
+		oImg.src = imgPlus.src;
+		oTable.style.display = "none";
+	}
+	
+	function nodeIsVisible(Node){
+        switch(navigator.family){
+        	case 'nn4':
+        		// Nav 4.x code fork...
+				var oTable = document.layers["span" + Node];
+        		break;
+        	case 'ie4':
+        		// IE 4/5 code fork...
+				var oTable = document.all["span" + Node];
+        		break;
+        	case 'gecko':
+        		// Standards Compliant code fork...
+				var oTable = document.getElementById("span" + Node);
+        		break;
+        }
+		return (oTable && oTable.style.display == "block");
+	}
+	
+	function toggleNodeVisibility(Node){
+		if (nodeIsVisible(Node)){
+			hideNode(Node);
+		}else{
+			showNode(Node);
+		}
+	}
+</script>
+<!-- template designed by Julien Damon based on PHPEdit's generated templates, and tweaked by Greg Beaver -->
+<body bgcolor="#ffffff" ><h2>File: C:\xampp\php\phpdoc/php/funciones.php</h2>
+<div class="tab-pane" id="tabPane1">
+<script type="text/javascript">
+tp1 = new WebFXTabPane( document.getElementById( "tabPane1" ) );
+</script>
 
-<a name="sec-description"></a>
-<div class="info-box">
-	<div class="info-box-title">Description</div>
-	<div class="nav-bar">
-					<span class="disabled">Description</span> |
-															<a href="#sec-functions">Functions</a>
-			</div>
-	<div class="info-box-body">	
-		<!-- ========== Info from phpDoc block ========= -->
-		
-			</div>
+<div class="tab-page" id="Description">
+<h2 class="tab">Description</h2>
+<!-- ========== Info from phpDoc block ========= -->
+<ul>
+	</ul>
+<!-- =========== Used Classes =========== -->
+<A NAME='classes_summary'><!-- --></A>
+<h3>Classes defined in this file</h3>
+
+<TABLE CELLPADDING='3' CELLSPACING='0' WIDTH='100%' CLASS="border">
+	<THEAD>
+		<TR><TD STYLE="width:20%"><h4>CLASS NAME</h4></TD><TD STYLE="width: 80%"><h4>DESCRIPTION</h4></TD></TR>
+	</THEAD>
+	<TBODY>
+			</TBODY>
+</TABLE>
 </div>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "Description" ) );</script>
+<div class="tab-page" id="tabPage1">
+<!-- ============ Includes DETAIL =========== -->
+
+<h2 class="tab">Include/Require Statements</h2>
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage1" ) );</script>
+
+
+</div>
+<div class="tab-page" id="tabPage2">
+<!-- ============ GLOBAL DETAIL =========== -->
+
+<h2 class="tab">Global Variables</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage2" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage3">
+<!-- ============ CONSTANT DETAIL =========== -->
+
+<A NAME='constant_detail'></A>
+<h2 class="tab">Constants</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage3" ) );</script>
+
+</div>
+<div class="tab-page" id="tabPage4">
+<!-- ============ FUNCTION DETAIL =========== -->
+
+<h2 class="tab">Functions</h2>
+
+<script type="text/javascript">tp1.addTabPage( document.getElementById( "tabPage4" ) );</script>
+
+<a name="functionbuscarCampo" id="functionbuscarCampo"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">buscarCampo</strong> (line <span class="linenumber">104</span>)
+ </h4> 
+<h4><i>void</i> <strong>buscarCampo(
+ $nombre_campo,  $tabla,  $nombre_criterio,  $criterio)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $nombre_campo</strong>: </li>
+			<li><strong> $tabla</strong>: </li>
+			<li><strong> $nombre_criterio</strong>: </li>
+			<li><strong> $criterio</strong>: </li>
+		</ul>
 		
-
-	
-	
-	
-	<a name="sec-functions"></a>	
-	<div class="info-box">
-		<div class="info-box-title">Functions</div>
-		<div class="nav-bar">
-			<a href="#sec-description">Description</a> |
-															<span class="disabled">Functions</span>
-		</div>
-		<div class="info-box-body">	
-			<a name="functionbuscarCampo" id="functionbuscarCampo"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">buscarCampo</span> (line <span class="line-number">79</span>)
-	</div> 
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			buscarCampo
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$nombre_campo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tabla</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nombre_criterio</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$criterio</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$nombre_campo</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$tabla</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$nombre_criterio</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$criterio</span>			</li>
-				</ul>
-		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functioncalcularDewey" id="functioncalcularDewey"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">calcularDewey</span> (line <span class="line-number">19</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">calcularDewey</strong> (line <span class="linenumber">44</span>)
+ </h4> 
+<h4><i>void</i> <strong>calcularDewey(
+ $id_categoria,  $id_autor,  $titulo)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			calcularDewey
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$id_categoria</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id_autor</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$titulo</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$id_categoria</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$id_autor</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$titulo</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $id_categoria</strong>: </li>
+			<li><strong> $id_autor</strong>: </li>
+			<li><strong> $titulo</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionconexion" id="functionconexion"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">conexion</span> (line <span class="line-number">47</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">conexion</strong> (line <span class="linenumber">72</span>)
+ </h4> 
+<h4><i>void</i> <strong>conexion(
+)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			conexion
-		</span>
-				()
-			</div>
-
+<!-- ========== Info from phpDoc block ========= -->
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionconfiguraAcceso" id="functionconfiguraAcceso"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">configuraAcceso</span> (line <span class="line-number">30</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">configuraAcceso</strong> (line <span class="linenumber">55</span>)
+ </h4> 
+<h4><i>void</i> <strong>configuraAcceso(
+ $server,  $usuario,  $password,  $db)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			configuraAcceso
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$server</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$usuario</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$db</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$server</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$usuario</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$password</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$db</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $server</strong>: </li>
+			<li><strong> $usuario</strong>: </li>
+			<li><strong> $password</strong>: </li>
+			<li><strong> $db</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="functioncontrolSesion" id="functioncontrolSesion"><!-- --></a>
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">controlSesion</strong> (line <span class="linenumber">3</span>)
+ </h4> 
+<h4><i>void</i> <strong>controlSesion(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
+</div>
+<a name="functiondibujaMenu" id="functiondibujaMenu"><!-- --></a>
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">dibujaMenu</strong> (line <span class="linenumber">11</span>)
+ </h4> 
+<h4><i>void</i> <strong>dibujaMenu(
+)</strong></h4>
+
+<!-- ========== Info from phpDoc block ========= -->
+		
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functioneligeplantilla" id="functioneligeplantilla"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">eligeplantilla</span> (line <span class="line-number">415</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">eligeplantilla</strong> (line <span class="linenumber">145</span>)
+ </h4> 
+<h4><i>void</i> <strong>eligeplantilla(
+ $plantilla_usuario)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			eligeplantilla
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$plantilla_usuario</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$plantilla_usuario</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $plantilla_usuario</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionextraeCampo2" id="functionextraeCampo2"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">extraeCampo2</span> (line <span class="line-number">89</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">extraeCampo2</strong> (line <span class="linenumber">114</span>)
+ </h4> 
+<h4><i>void</i> <strong>extraeCampo2(
+ $scampo,  $fcampo,  $nombre_campo1,  $criterio1,  $nombre_campo2,  $criterio2)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			extraeCampo2
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$scampo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fcampo</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nombre_campo1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$criterio1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$nombre_campo2</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$criterio2</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$scampo</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$fcampo</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$nombre_campo1</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$criterio1</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$nombre_campo2</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$criterio2</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $scampo</strong>: </li>
+			<li><strong> $fcampo</strong>: </li>
+			<li><strong> $nombre_campo1</strong>: </li>
+			<li><strong> $criterio1</strong>: </li>
+			<li><strong> $nombre_campo2</strong>: </li>
+			<li><strong> $criterio2</strong>: </li>
+		</ul>
 		
-	
-</div>
-<a name="functionlistadoPorAutor" id="functionlistadoPorAutor"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">listadoPorAutor</span> (line <span class="line-number">98</span>)
-	</div> 
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			listadoPorAutor
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$usuario</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dondebuscas</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quebuscas</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pagina</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mipagina</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$usuario</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$dondebuscas</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$quebuscas</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$pagina</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$mipagina</span>			</li>
-				</ul>
-		
-	
-</div>
-<a name="functionlistadoPorCategoria" id="functionlistadoPorCategoria"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">listadoPorCategoria</span> (line <span class="line-number">297</span>)
-	</div> 
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			listadoPorCategoria
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$usuario</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dondebuscas</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quebuscas</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pagina</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mipagina</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$usuario</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$dondebuscas</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$quebuscas</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$pagina</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$mipagina</span>			</li>
-				</ul>
-		
-	
-</div>
-<a name="functionlistadoPorTitulo" id="functionlistadoPorTitulo"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">listadoPorTitulo</span> (line <span class="line-number">202</span>)
-	</div> 
-
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			listadoPorTitulo
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$usuario</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$dondebuscas</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$quebuscas</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$pagina</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$mipagina</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$usuario</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$dondebuscas</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$quebuscas</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$pagina</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$mipagina</span>			</li>
-				</ul>
-		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionqrgen" id="functionqrgen"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">qrgen</span> (line <span class="line-number">399</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">qrgen</strong> (line <span class="linenumber">129</span>)
+ </h4> 
+<h4><i>void</i> <strong>qrgen(
+ $linkdata)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			qrgen
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$linkdata</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$linkdata</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $linkdata</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionqrlink" id="functionqrlink"><!-- --></a>
-<div class="evenrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">qrlink</span> (line <span class="line-number">392</span>)
-	</div> 
+<div style="background='#ffffff'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">qrlink</strong> (line <span class="linenumber">122</span>)
+ </h4> 
+<h4><i>void</i> <strong>qrlink(
+ $nombrelibro,  $ididioma)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			qrlink
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$nombrelibro</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$ididioma</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$nombrelibro</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$ididioma</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $nombrelibro</strong>: </li>
+			<li><strong> $ididioma</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
 <a name="functionrellenarCampos" id="functionrellenarCampos"><!-- --></a>
-<div class="oddrow">
-	
-	<div>
-		<img src="../media/images/Function.png" />
-		<span class="method-title">rellenarCampos</span> (line <span class="line-number">3</span>)
-	</div> 
+<div style="background='#eeeeee'">
+<h4>
+  <img src="../media/images/PublicMethod.gif" border="0" /> <strong class="method">rellenarCampos</strong> (line <span class="linenumber">28</span>)
+ </h4> 
+<h4><i>void</i> <strong>rellenarCampos(
+ $ftabla,  $orden)</strong></h4>
 
-	<!-- ========== Info from phpDoc block ========= -->
-	<div class="method-signature">
-		<span class="method-result">void</span>
-		<span class="method-name">
-			rellenarCampos
-		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$ftabla</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$orden</span>)
-			</div>
-
-			<ul class="parameters">
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$ftabla</span>			</li>
-					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$orden</span>			</li>
-				</ul>
+<!-- ========== Info from phpDoc block ========= -->
+		<h4>Parameters</h4>
+	<ul>
+			<li><strong> $ftabla</strong>: </li>
+			<li><strong> $orden</strong>: </li>
+		</ul>
 		
-	
+	<h4>Info</h4>
+	<ul>
+		</ul>
 </div>
-		</div>
+</div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+
+setupAllTabs();
+
+//]]>
+</script>
+	<div id="credit">
+		<hr />
+		Documentation generated on Fri, 02 Sep 2011 10:59:04 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</div>
-	
-	<p class="notes" id="credit">
-		Documentation generated on Wed, 31 Aug 2011 13:17:26 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
-	</p>
-	</div></body>
+</body>
 </html>
