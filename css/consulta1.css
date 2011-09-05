@@ -217,26 +217,42 @@ input[type=checkbox], input[type=radio] {
 }
 
 #menu {
-    font-size: small;
-    display:block;
     position: absolute;
-    color:black;
+    top: 0;
+    left:0;
+    height: 20px;    
+    width: 100%;
+    font-size: small;
+    display: block;
+    color: black;
     background-color: white;
-    top: 5px;
+    vertical-align:middle;
+    text-align:center;
 }
-
 #pie {
-    position:absolute;
-    bottom: 5px;
-    font-size: small;
-    display:block;
-    color:black;
-    background-color: white;
     position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    font-size: small;
+    color: black;
+    background-color: white;
+    vertical-align:middle;
+    text-align:center;
 }
 #logout {
-    float: right;    
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    height: 20px;
+    font-size: small;
+    color: black;
+    background-color: white;
+    vertical-align:middle;
+    text-align:center;
 }
+
 A:link {text-decoration:none;}
 A:visited {text-decoration:none;}
 A:active {text-decoration:none;}
@@ -296,4 +312,17 @@ A:hover {text-decoration:underline;}
     font-weight: bold;
     color: #000;
     background-color: #B8860B;
+}
+
+#menu_usuarios {
+    text-align: center;
+    display:block;
+    color:#B8860B;
+    background-color: #000;
+}
+
+#menu_usuarios :hover{
+    color:#000;
+    background-color: #B8860B;
+    text-decoration: none;
 }

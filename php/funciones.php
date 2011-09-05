@@ -91,7 +91,6 @@ function conexion() {
     $pwd = "phppwd";
     $db = "biblos_g2";
 
-
     $conecta = mysql_connect($server, $usr, $pwd);
     if (!$conecta)
         echo "Error conectando a la base de datos.";
@@ -143,9 +142,7 @@ function qrgen($linkdata) {
 }
 
 function eligeplantilla($plantilla_usuario) {
-    echo "<link rel='shortcut icon' type='image/x-icon' href='..imgs/favicon.ico'  />";
+    echo "<link rel='shortcut icon' type='image/x-icon' href='../imgs/favicon.ico'  />";
     echo "<link rel='stylesheet' type='text/css' href='../css/consulta" . $plantilla_usuario . ".css' />";
     echo "<script src='../js/funciones.js' type='text/javascript'></script>";
 }
-
-?>

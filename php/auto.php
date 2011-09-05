@@ -1,9 +1,13 @@
-<!DOCTYPE html> 
+<?php
+session_start();
+include "funciones.php";
+controlSesion();
+conexion();
+?>
+<!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="../js/jquery.js"></script>
-        <script type="text/javascript" src="../js/funciones.js"></script>
-        <script type="text/javascript" src="../js/jquery.autocomplete.js"></script>
+        <title>Biblos</title>
         <?php eligeplantilla($_SESSION['plantilla']); ?>
     </head>
     

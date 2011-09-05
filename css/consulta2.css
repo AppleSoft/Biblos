@@ -11,7 +11,7 @@ form {
     padding:1em;
     border:2px solid #eee;
     margin:15px;
-    width:430px;
+    width:400px;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
@@ -210,33 +210,44 @@ input[type=checkbox], input[type=radio] {
 #menu {
     position: absolute;
     top: 0;
-    left:2px;
+    left:0;
     height: 20px;    
     width: 100%;
     font-size: small;
-    display:block;
-    color:black;
+    display: block;
+    color: black;
     background-color: white;
+    vertical-align:middle;
+    text-align:center;
+}
+
+#menu :hover {
+    text-decoration: none;
+    background-color: #ffdead;
 }
 
 #pie {
-    position:absolute;
+    position: absolute;
     bottom: 0;
-    left:2px;
+    left: 0;
     height: 20px;
     width: 100%;
     font-size: small;
-    color:black;
+    color: black;
     background-color: white;
+    vertical-align:middle;
+    text-align:center;
 }
 #logout {
-    position:absolute;
+    position: absolute;
     bottom: 0;
+    right: 30px;
     height: 20px;
-    right:15px;
     font-size: small;
-    color:black;
+    color: black;
     background-color: white;
+    vertical-align:middle;
+    text-align:center;
 }
 A:link {text-decoration:none;}
 A:visited {text-decoration:none;}
@@ -304,4 +315,16 @@ A:hover {text-decoration:underline;}
     left:600px;
     font-size: small;
     display:block;
+}
+
+#menu_usuarios {
+    text-align: center;
+    display:block;
+    color:#00bfff;
+    background-color: #fff;
+}
+
+#menu_usuarios :hover{
+    background-color: #ffdead;
+    text-decoration: none;
 }

@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 31-08-2011 a las 13:54:38
--- Versión del servidor: 5.3.0
+-- Tiempo de generación: 02-09-2011 a las 12:56:01
+-- Versión del servidor: 5.5.8
 -- Versión de PHP: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
@@ -359,9 +359,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 --
 
 INSERT INTO `usuario` (`dni`, `clave`, `nombre_usuario`, `apellido1_usuario`, `apellido2_usuario`, `email`, `telefono`, `direccion`, `plantilla_id_plantilla`, `tipos_usuario_id_tipo_usuario`) VALUES
-(00000001, 'clave1', 'lector1', 'lector1_apellido1', 'lector1_apellido2', 'lector1_email', NULL, 'lector1_direccion', 1, 2),
-(00000002, 'clave2', 'administrador', 'administrador_apellido1', 'administrador_apellido2', 'administrador_email', NULL, 'administrador1_direccion', 1, 1),
-(00000003, 'clave2', 'lector2', 'apellido2', 'apellido22', 'e@mail.com', 43424, 'call ate', 1, 2);
+(00000001, 'clave1', 'lector1', 'lector1_apellido1', 'lector1_apellido2', 'lector1_email', NULL, 'lector1_direccion', 2, 2),
+(00000002, 'clave2', 'administrador', 'administrador_apellido1', 'administrador_apellido2', 'administrador_email', NULL, 'administrador1_direccion', 2, 1),
+(00000003, 'clave2', 'lector2', 'apellido2', 'apellido22', 'e@mail.com', 43424, 'call ate', 2, 2);
 
 -- --------------------------------------------------------
 

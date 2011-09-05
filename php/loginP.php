@@ -8,7 +8,7 @@
     <body>
         <?php
         include "funciones.php";
-        include "defcon.php";
+        conexion();
 
         $usuario = trim($_POST['nombre_usuario']);
         $pwd = trim($_POST['password']);

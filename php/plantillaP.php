@@ -1,7 +1,8 @@
 <?php
 session_start();
 include "funciones.php";
-include "defcon.php";
+controlSesion();
+conexion();
 
 $dni=$_SESSION['dni'];
 $plantilla=$_POST['opciones'];

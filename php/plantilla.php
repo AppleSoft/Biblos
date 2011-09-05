@@ -1,15 +1,8 @@
 <?php
 session_start();
-if (!isset($_SESSION['logeado'])
-        || $_SESSION['logeado'] != true) {
-    header('Location: loginG.php'); //Redirige al inicio de sesion en caso de que no tengas hecho el login
-    exit;
-}
-else {
-    $usuario = $_SESSION['usuario'];
-    $tipousuario = $_SESSION['tipousuario'];
-    $usrdni=$_SESSION['dni'];
-}
+include "funciones.php";
+controlSesion();
+conexion();
 ?>
 <!DOCTYPE html>
 <html>

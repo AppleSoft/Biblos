@@ -1,23 +1,19 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['logeado'])
-        || $_SESSION['logeado'] != true) {
-
-    header('Location: ../index.php'); //Redirige al inicio de sesion en caso de que no tengas hecho el login
-
-    exit;
-}
+include "funciones.php";
+controlSesion();
+conexion();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Biblos</title>
+        <?php eligeplantilla($_SESSION['plantilla']); ?>
     </head>
     <body>
         <?php
         include "funciones.php";
-        include "defcon.php";
+        conexion();
 
         $usuario_dni = $_POST['usuario_dni'];
         $libro_categoria_id_categoria = $_POST['libro_categoria_id_categoria'];
