@@ -10,23 +10,36 @@ function controlSesion() {
 
 function dibujaMenu() {
     if ($_SESSION['tipousuario'] == 1) {
-        echo "<a href='libroG.php'>Agregar un libro a la biblioteca</a> || ";
-        echo "<a href='modificaLibroG.php'>Modificar un libro</a> || ";
-        echo "<a href='autorG.php'>Agregar autor a la biblioteca</a> || ";
-        echo "<a href='modificaAutorG.php'>Modificar autor</a> || ";
-        echo "<a href='editorialG.php'>Agregar una editorial a la biblioteca</a> || ";
-        echo "<a href='modificaEditorialG.php'>Modificar editorial</a> || "; ?>
-        <a href="javascript:;" onClick="window.open('menu_usuarios.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Gestion usuarios</a> ||
+
+        echo "<li><a href='#'>Gestion libros</a></li>";
+        echo "<ul>";
+        echo "<li><a href='libroG.php'>Agregar un libro a la biblioteca</a></li>";
+        echo "<li><a href='modificaLibroG.php'>Modificar un libro</a></li>";
+        echo "</ul>";
+        echo "<li><a href='#'>Gestion autores</a></li>";
+        echo "<ul>";
+        echo "<li><a href='autorG.php'>Agregar autor a la biblioteca</a></li>";
+        echo "<li><a href='modificaAutorG.php'>Modificar autor</a></li>";
+        echo "</ul>";
+        echo "<li><a href='#'>Gestion editoriales</a></li>";
+        echo "<ul>";
+        echo "<li><a href='editorialG.php'>Agregar una editorial a la biblioteca</a></li>";
+        echo "<li><a href='modificaEditorialG.php'>Modificar editorial</a></li>"; 
+        echo "<ul>";
+        echo "</li>";
+        ?>
+        <ul><li><a href="javascript:;" onClick="window.open('menu_usuarios.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Gestion usuarios</a></li> ||
 <?php
         }
-    echo "<a href='consulta_general.php'>Consulta la biblioteca</a> || ";
+    echo "<li><a href='consulta_general.php'>Consulta la biblioteca</a></li></ul> || ";
 ?>
-<a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a>
+    <li><a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a></li>
+
 <?php
+
 }
 
 function rellenarCampos($ftabla, $orden) {
-    include "defcon.php";
     $query = "SELECT * FROM $ftabla ORDER BY $orden";
     $result = mysql_query($query);
     $contcol = mysql_num_fields($result);
@@ -141,8 +154,9 @@ function qrgen($linkdata) {
     echo "<a href='$linkdata'><img src='" . $PNG_WEB_DIR . basename($filename) . "' /></a>";
 }
 
-function eligeplantilla($plantilla_usuario) {
+function eligeplantilla() {
+    $css=trim($_SESSION['css']);
     echo "<link rel='shortcut icon' type='image/x-icon' href='../imgs/favicon.ico'  />";
-    echo "<link rel='stylesheet' type='text/css' href='../css/consulta" . $plantilla_usuario . ".css' />";
+    echo "<link rel='stylesheet' type='text/css' href='../css/consulta" . $css . ".css' />";
     echo "<script src='../js/funciones.js' type='text/javascript'></script>";
 }

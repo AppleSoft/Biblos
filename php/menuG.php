@@ -8,11 +8,11 @@ conexion();
 <html>
     <head>
         <title>Biblos - Home</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
     </head>
     <body>
         <div id="menu">
-            <?php dibujaMenu(); ?>
+            <?php include "menucss.php"; ?>
         </div>
 
         <h1>Bienvenid@ a Biblos, tu biblioteca digital</h1>

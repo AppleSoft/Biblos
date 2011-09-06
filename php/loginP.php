@@ -24,7 +24,7 @@
             $_SESSION['usuario'] =$existe_usr;
             $_SESSION['dni']=$dni;
             $_SESSION['tipousuario']=$tipousuario;
-            $_SESSION['plantilla']=$plantilla_usuario;
+            $_SESSION['css']=$plantilla_usuario;
             echo header("location: menuG.php");
         }
         ?>

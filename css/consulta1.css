@@ -4,6 +4,7 @@ html {
     color: #B8860B;
     background-color: #000;
 }
+
 form {
     position:absolute;
     top: 70px;
@@ -216,47 +217,13 @@ input[type=checkbox], input[type=radio] {
     background-color: #659CD8;
 }
 
-#menu {
-    position: absolute;
-    top: 0;
-    left:0;
-    height: 20px;    
-    width: 100%;
-    font-size: small;
-    display: block;
-    color: black;
-    background-color: white;
-    vertical-align:middle;
-    text-align:center;
-}
-#pie {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 20px;
-    width: 100%;
-    font-size: small;
-    color: black;
-    background-color: white;
-    vertical-align:middle;
-    text-align:center;
-}
-#logout {
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-    height: 20px;
-    font-size: small;
-    color: black;
-    background-color: white;
-    vertical-align:middle;
-    text-align:center;
-}
+
+
 
 A:link {text-decoration:none;}
 A:visited {text-decoration:none;}
 A:active {text-decoration:none;}
-A:hover {text-decoration:underline;}
+A:hover {text-decoration:none;}
 
 .ac_results {
 	padding: 0px;
@@ -308,21 +275,80 @@ A:hover {text-decoration:underline;}
 	color: black;
 }
 
-#selecionado {
-    font-weight: bold;
-    color: #000;
+#menu {
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 20px;    
+    width: 100%;
+    font-size: small;
+    display: block;
+    color: black;
     background-color: #B8860B;
+    vertical-align:middle;
+    text-align:center;
+}
+ul.menu_color {
+	list-style:none;
+        text-decoration: none;
+        text-align: center;
+        color:#B8860B;
+}
+ul.menu_color li {
+	display:block;
+	position:relative;
+	padding:3px 5px;
+        color:#B8860B;
+	background:black;
+	border:1px solid #696969;
+	
+}
+ul.menu_color ul {
+	position:absolute;
+	left:51px;
+	top:-1px;
+	display:none;
+	list-style:none;
+        
+}
+ul.menu_color > li > ul {
+	position:absolute;
+	left:-41px;
+	top:19px;
+	display:none;
+	list-style:none;
+        width:150px;
+}
+ul.menu_color li:hover {
+	border:3px solid #B8860B;
+}
+ul.menu_color li:hover > ul {
+	display:block;
+}
+ul.menu_color > li {
+	display:inline;
 }
 
-#menu_usuarios {
-    text-align: center;
-    display:block;
-    color:#B8860B;
-    background-color: #000;
+#pie {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    font-size: small;
+    color: black;
+    background-color: white;
+    vertical-align:middle;
+    text-align:center;
 }
-
-#menu_usuarios :hover{
-    color:#000;
-    background-color: #B8860B;
-    text-decoration: none;
+#logout {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    height: 20px;
+    font-size: small;
+    color: black;
+    background-color: white;
+    vertical-align:middle;
+    text-align:center;
 }

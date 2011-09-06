@@ -1,10 +1,9 @@
-<?php
+﻿<?php
 include "php/funciones.php";
 include "js/swift_required.php";
 conexion();
 
 $email=$_POST['email_to'];
-
 $sql="SELECT clave FROM usuario WHERE email='$email'";
 $result=mysql_query($sql);
 $count=mysql_num_rows($result);
@@ -22,7 +21,7 @@ $body="Tu contraseña es:$clave";
 
 $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com',465,'ssl')
              ->setUsername('applesoftmt@gmail.com')
-             ->setPassword('biblioteca2011');
+             ->setPassword('password');
  
 //Creamos el mailer pasándole el transport con la configuración de gmail
 $mailer = Swift_Mailer::newInstance($transport);
@@ -36,18 +35,25 @@ $message = Swift_Message::newInstance($subject)
 
             ->setBody($body);
 
+$message->setContentType("text/html");
  
 
 //Enviamos
 
 $result = $mailer->send($message);
-if ($result) echo "Su contraseña se ha enviado con exito a la direccion: $to";
-else "ERROR: no ha sido posible eviar su contraseña, contact con el <a href='mailto:applesoftmt@gmail.com'>administrador</a>";
-
+if ($result) {
+    echo "Su contraseña se ha enviado con exito a la direccion: $to";
+     header('Refresh: 5, url= index.php');
+}
+else {
+    "ERROR: no ha sido posible eviar su contraseña, contact con el <a href='mailto:applesoftmt@gmail.com'>administrador</a>";
+ header('Refresh: 5, url= index.php');
+}
 }
 
 else {
 echo "No hay ninguna cuenta associada a la direccion $email";
+ header('Refresh: 5, url= index.php');
 }
 
 
