@@ -1,11 +1,11 @@
 <div id="dropdown_filtros">
     <?php
-    include "defcon.php";
+    conexion();
     $query = "SELECT * FROM libro ORDER BY titulo";
     $result = mysql_query($query);
     echo "Introduce busqueda";
     ?>
-    <input type="text" value="Introduce titulo" id="titulo_busqueda" class="ac_input" onfocus="if(this.value=='Introduce titulo') value='';" onblur="cambiaInput(this.value);"  />
+    <input type="text" value="Introduce titulo" id="titulo_busqueda" onfocus="if(this.value=='Introduce titulo') value='';" onblur="cambiaInput(this.value);"  />
     <br />
     <?php
     echo "Titulos disponibles<br>";

@@ -1,6 +1,7 @@
     <ul class="menu_color">
         <li><a href='#'>Gestion libros</a>
             <ul>
+                <li><a href='consulta_general.php'>Consulta General</a></li>
                 <li><a href='libroG.php'>Agregar</a></li>
                 <li><a href='modificaLibroG.php'>Modificar</a></li>
                 <li><a href='borraLibroG.php'>Borrar</a></li>

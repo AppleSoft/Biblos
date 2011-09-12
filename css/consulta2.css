@@ -115,7 +115,7 @@ textarea {
 }
 #formulario_consulta {
     position:absolute;
-    top:30px;
+    top:100px;
     left:500px;
     width: 20em;
     border:2px dotted #ddd;
@@ -128,7 +128,7 @@ textarea {
 }
 .filtros  {
     position:absolute;
-    top: 200px;
+    top: 280px;
     left:510px;
     width: 9em;
     border:2px solid #eee;
@@ -137,9 +137,10 @@ textarea {
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
+
 #oculto2{
     position: absolute;
-    top: 80px;
+    top: 280px;
     left:490px;
     width: 220px;
     background:#fff;
@@ -148,6 +149,9 @@ textarea {
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
+
+
+
 #autocompleta {
     position:absolute;
     top:45px;
@@ -169,7 +173,7 @@ textarea {
 }
 #qr {
     position:absolute;
-    top: 240px;
+    top: 320px;
     left:475px;
     padding:1em;
     background: white;
@@ -180,8 +184,8 @@ textarea {
 
 #dropdown_filtros {
     position:absolute;
-    top:20px;
-    left:760px;
+    top:280px;
+    left:720px;
     width: 280px;
     background: white;
     border:2px dotted #ddd;
@@ -351,8 +355,8 @@ ul.menu_color > li {
 }
 
 #pie {
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom:0;
     left: 0;
     height: 20px;
     width: 100%;
@@ -363,7 +367,7 @@ ul.menu_color > li {
     text-align:center;
 }
 #logout {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 30px;
     height: 20px;

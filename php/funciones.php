@@ -9,7 +9,7 @@ function controlSesion() {
 }
 
 function dibujaMenu() {
-    if ($_SESSION['tipousuario'] == 1) {
+    if ($_SESSION['tipousuario'] == 0) {
         echo "<li><a href='#'>Gestion libros</a></li>";
         echo "<ul>";
         echo "<li><a href='libroG.php'>Agregar un libro a la biblioteca</a></li>";
@@ -162,7 +162,7 @@ function eligeplantilla() {
 
 function controlAdmin (){
     $tipousuario = $_SESSION['tipousuario'];
-    if ($tipousuario != 0 || $tipousuario != 1) {
+    if ($tipousuario != 0) {
     echo "<script type='text/javascript'>
         window.alert('ahi listillo! tienes que ser administrador para poder modificar la base de datos!')
         </script>";

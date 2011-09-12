@@ -57,10 +57,6 @@ controlAdmin();
             echo "<input type='hidden' name='libro_cod_apellido' value='$row[1]'>"; //libro -> cod_apellido
             echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>"; //libro -> cod_titulo
             echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>"; //fecha y hora date("Ymd") date("H:i:s")
-            echo "<div id='qr'>";
-            $data = qrlink($row[4], $row[12]);
-            qrgen($data);
-            echo "</div>";
         }
 
         echo "<br>Hay $total_libros libros en la biblioteca<br>";

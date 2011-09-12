@@ -1,12 +1,12 @@
 <div id="dropdown_filtros">
     <?php
-    include "defcon.php";
+    conexion();
     $query = "SELECT * FROM autor ORDER BY apellido1";
     $result = mysql_query($query);
     echo "Introduce busqueda";
     ?>
 
-    <input type="text" value="Introduce autor" id="autor_busqueda" class="ac_input" onfocus="if(this.value=='Introduce autor') value='';" onblur="cambiaInput(this.value);"  />
+    <input type="text" value="Introduce autor" id="autor_busqueda" onfocus="if(this.value=='Introduce autor') value='';" onblur="cambiaInput(this.value);"  />
     <br />
 
     <?php

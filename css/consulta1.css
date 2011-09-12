@@ -115,7 +115,7 @@ textarea {
 }
 #formulario_consulta {
     position:absolute;
-    top:30px;
+    top:230px;
     left:500px;
     width: 20em;
     border:2px dotted #ddd;
@@ -125,9 +125,9 @@ textarea {
     border:2px dotted #ddd;
     background: white;
 }
-.filtros  {
+.filtros {
     position:absolute;
-    top: 200px;
+    top: 420px;
     left:510px;
     width: 9em;
     border:2px solid #eee;
@@ -136,8 +136,12 @@ textarea {
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
-#oculto2{
+
+#oculto2 {
     position: absolute;
+    top: 280px;
+    left:490px;
+    width: 220px;
     background:#fff;
     padding:1em;
     border:1px solid #eee;
@@ -190,7 +194,8 @@ input[type=checkbox], input[type=radio] {
     width:1em; 
     height:1em; 
 
-    margin:0; }
+    margin:0; 
+}
 
 .Nube {
     position: relative;
@@ -291,13 +296,16 @@ A:hover {text-decoration:none;}
     background-color: #B8860B;
     vertical-align:middle;
     text-align:center;
+    z-index: 50;
 }
+
 ul.menu_color {
     list-style:none;
     text-decoration: none;
     text-align: center;
     color:#B8860B;
 }
+
 ul.menu_color li {
     display:block;
     position:relative;
@@ -307,6 +315,7 @@ ul.menu_color li {
     border:1px solid #696969;
 
 }
+
 ul.menu_color ul {
     position:absolute;
     left:51px;
@@ -315,6 +324,7 @@ ul.menu_color ul {
     list-style:none;
 
 }
+
 ul.menu_color > li > ul {
     position:absolute;
     left:-41px;
@@ -323,12 +333,15 @@ ul.menu_color > li > ul {
     list-style:none;
     width:150px;
 }
+
 ul.menu_color li:hover {
     border:3px solid #B8860B;
 }
+
 ul.menu_color li:hover > ul {
     display:block;
 }
+
 ul.menu_color > li {
     display:inline;
 }
@@ -345,6 +358,7 @@ ul.menu_color > li {
     vertical-align:middle;
     text-align:center;
 }
+
 #logout {
     position: absolute;
     bottom: 0;
