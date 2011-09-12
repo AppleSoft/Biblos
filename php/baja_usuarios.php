@@ -8,14 +8,14 @@ conexion();
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
         <script src='../js/jquery.autocomplete.js' type='text/javascript'></script>
         
     </head>
     <body>
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>        
+            <?php include "menucss.php"; ?>
+        </div>  
         <h1>Usuarios registrados en Biblos</h1>
         <?php
         $mipagina = $_SERVER['PHP_SELF'];

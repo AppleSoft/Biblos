@@ -21,7 +21,7 @@ $body="Tu contraseña es:$clave";
 
 $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com',465,'ssl')
              ->setUsername('applesoftmt@gmail.com')
-             ->setPassword('password');
+             ->setPassword('aquiponerlacontraseña');
  
 //Creamos el mailer pasándole el transport con la configuración de gmail
 $mailer = Swift_Mailer::newInstance($transport);

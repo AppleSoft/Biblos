@@ -7,7 +7,6 @@
         <script src="js/funciones.js" type="text/javascript"></script>
     </head>
     <body>
-
         <div id="form_general">
             <form action="php/loginP.php" method="POST" onSubmit="return validacampo(this);" >
                 <div id="cabecera">

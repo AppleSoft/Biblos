@@ -3,17 +3,18 @@ session_start();
 include "funciones.php";
 controlSesion();
 conexion();
+controlAdmin();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
     </head>
     <body>
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>   
+            <?php include "menucss.php"; ?>
+        </div> 
         <?php
         $mipagina = $_SERVER['PHP_SELF'];
         $usuario = $_SESSION['usuario'];

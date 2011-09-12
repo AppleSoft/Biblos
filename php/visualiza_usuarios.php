@@ -8,7 +8,7 @@ conexion();
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
         <script src='../js/jquery.autocomplete.js' type='text/javascript'></script>
         
     </head>

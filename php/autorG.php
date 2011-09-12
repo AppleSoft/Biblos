@@ -3,18 +3,19 @@ session_start();
 include "funciones.php";
 controlSesion();
 conexion();
+controlAdmin();
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
     </head>
     <body oncontextmenu="return false;">
 
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>   
+            <?php include "menucss.php"; ?>
+        </div> 
 
         <FORM ACTION="autorP.php" METHOD="post" onSubmit="return validacampo(this);">
             Nombre: <INPUT TYPE="text" NAME="nombre" SIZE=30 MAXLENGTH=30 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*

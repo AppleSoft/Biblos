@@ -4,7 +4,7 @@
         <script type="text/javascript" src="../js/jquery.js"></script>
         <script type="text/javascript" src="../js/funciones.js"></script>
         <script type="text/javascript" src="../js/jquery.autocomplete.js"></script>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
     </head>
     <body>
         <form name="formulario_consulta" id="formulario_consulta" action="consulta_especifica.php" method="post">

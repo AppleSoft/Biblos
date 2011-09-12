@@ -8,12 +8,12 @@ conexion();
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
     </head>
     <body oncontextmenu="return false;">
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>   
+            <?php include "menucss.php"; ?>
+        </div>
         <FORM ACTION="libroP.php" METHOD="post" onSubmit="return validacampo(this);">
             <fieldset class="login">
                 <legend>Datos nuevo libro</legend>

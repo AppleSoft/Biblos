@@ -1,23 +1,9 @@
 <?php
 session_start();
-
-if (!isset($_SESSION['logeado'])
-        || $_SESSION['logeado'] != true) {
-    header('Location: loginG.php');
-    exit;
-} else {
-    $usuario = $_SESSION['usuario'];
-    $tipousuario = $_SESSION['tipousuario'];
-    $usuario_dni = $_SESSION['dni'];
-}
-
-if ($tipousuario != 0 || $tipousuario != 1) {
-    echo "<script type='text/javascript'>
-        window.alert('ahi listillo! tienes que ser administrador para poder modificar!')
-        </script>";
-    header("Refresh: 2; URL=consulta_general.php");
-    exit;
-}
+include "funciones.php";
+controlSesion();
+conexion();
+controlAdmin();
 ?>
 
 <!DOCTYPE html>

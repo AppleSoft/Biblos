@@ -8,12 +8,12 @@ conexion();
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
     </head>
     <body>
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>        
+            <?php include "menucss.php"; ?>
+        </div>       
         <FORM ACTION="editorialP.php" METHOD="post" onSubmit="return validacampo(this);">
             Editorial : <INPUT TYPE="text" NAME="nombre_editorial" SIZE=45 MAXLENGTH=45 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
            <br/>

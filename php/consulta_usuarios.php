@@ -8,14 +8,14 @@ conexion();
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
-        <script src='../js/jquery.autocomplete.js' type='text/javascript'></script>
-        
+        <?php eligeplantilla(); ?>
     </head>
     <body>
+
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>        
+            <?php include "menucss.php"; ?>
+        </div>       
+
         <h1>Usuarios registrados en Biblos</h1>
         <?php
         $mipagina = $_SERVER['PHP_SELF'];
@@ -28,20 +28,16 @@ conexion();
         if (!isset($pagina)) {
             $pagina = "1";
         }
-
         $sql = "SELECT * FROM usuario ORDER BY apellido1_usuario";
         $query = mysql_query($sql);
         $total_usuarios = mysql_num_rows($query);
         $limite = "1";
         $total_paginas = ceil($total_usuarios / $limite);
         $offset = ($pagina - 1) * $limite;
-
         $query = "SELECT * FROM usuario ORDER BY apellido1_usuario LIMIT $offset, $limite";
         $result = mysql_query($query);
-
         echo "<div id='formulario_libro'>\n";
         echo "<form action='#' method='post' name='datos_usuario'>\n";
-
         while ($row = mysql_fetch_array($result)) {
             echo "DNI:<input type='text' name='dni' value='$row[0]'><br>\n";
             echo "Clave:<input type='password' name='clave' value='$row[1]'><br>\n";
@@ -95,42 +91,9 @@ conexion();
         echo "</form>\n";
         echo "</div>\n";
         ?>
-
-        <div id="busca_usr">
-            <input type="text" name="usr_busqueda" value="Introduce usuario" id="usr_busqueda" onfocus="if(this.value=='Introduce usuario') value='';" onblur="cambiaInput(this.value);"  />
-        </div>
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
         <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
-        
-        <script type="text/javascript">
-            function buscaStringaUsuario(stringa) {
-                if( !!stringa.extra ) var sValue = stringa.extra[0];
-                else var sValue = stringa.seleccionaResultadoUsuario;
-            }
-            function seleccionaResultadoUsuario(stringa) {
-                buscaStringaUsuario (stringa);
-            }
-            
-            function lookupAjax(){
-                var oSuggest = $("#usr_busqueda")[0].autocompleter;
-                oSuggest.buscaStringaUsuario();
-                return false;
-            }
-            $("#usr_busqueda").autocomplete(
-            "auto_usr.php",
-            {
-                delay:10,
-                minChars:1,
-                matchSubset:1,
-                matchContains:1,
-                cacheLength:10,
-                onItemSelect:seleccionaResultadoUsuario,
-                onbuscaStringa:buscaStringaUsuario,
-                autoFill:true
-            }
-        );
-        </script>
     </body>
 </html>

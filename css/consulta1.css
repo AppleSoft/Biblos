@@ -5,6 +5,10 @@ html {
     background-color: #000;
 }
 
+h1 {
+    text-align: center;
+}
+
 form {
     position:absolute;
     top: 70px;
@@ -226,53 +230,53 @@ A:active {text-decoration:none;}
 A:hover {text-decoration:none;}
 
 .ac_results {
-	padding: 0px;
-        max-height: 200px;
-	border: 1px solid #7FB7FB;
-        overflow: hidden;
-	overflow-y: scroll;
-        background-color: #E0FFFF;
+    padding: 0px;
+    max-height: 200px;
+    border: 1px solid #7FB7FB;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #E0FFFF;
 }
 
 .ac_results ul {
-	width: 100%;
-	list-style-position: outside;
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .ac_results iframe {
-	display:none;
-	display/**/:block;
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:-1;
-	width:3000px;
-	height:3000px;
-  
+    display:none;
+    display/**/:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:3000px;
+    height:3000px;
+
 }
 
 .ac_results li {
-	margin: 0px;
-	padding: 2px 5px;
-	cursor: pointer;
-	display: block;
-	width: 100%;
-	font: menu;
-	font-size: 12px;
-	overflow: hidden;
-  
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font: menu;
+    font-size: 12px;
+    overflow: hidden;
+
 }
 
 .ac_loading {
-	background : #AFD2FD url('img/loader.gif') right center no-repeat;
+    background : #AFD2FD url('img/loader.gif') right center no-repeat;
 }
 
 .ac_over {
-	background-color: white;
-	color: black;
+    background-color: white;
+    color: black;
 }
 
 #menu {
@@ -289,44 +293,44 @@ A:hover {text-decoration:none;}
     text-align:center;
 }
 ul.menu_color {
-	list-style:none;
-        text-decoration: none;
-        text-align: center;
-        color:#B8860B;
+    list-style:none;
+    text-decoration: none;
+    text-align: center;
+    color:#B8860B;
 }
 ul.menu_color li {
-	display:block;
-	position:relative;
-	padding:3px 5px;
-        color:#B8860B;
-	background:black;
-	border:1px solid #696969;
-	
+    display:block;
+    position:relative;
+    padding:3px 5px;
+    color:#B8860B;
+    background:black;
+    border:1px solid #696969;
+
 }
 ul.menu_color ul {
-	position:absolute;
-	left:51px;
-	top:-1px;
-	display:none;
-	list-style:none;
-        
+    position:absolute;
+    left:51px;
+    top:-1px;
+    display:none;
+    list-style:none;
+
 }
 ul.menu_color > li > ul {
-	position:absolute;
-	left:-41px;
-	top:19px;
-	display:none;
-	list-style:none;
-        width:150px;
+    position:absolute;
+    left:-41px;
+    top:19px;
+    display:none;
+    list-style:none;
+    width:150px;
 }
 ul.menu_color li:hover {
-	border:3px solid #B8860B;
+    border:3px solid #B8860B;
 }
 ul.menu_color li:hover > ul {
-	display:block;
+    display:block;
 }
 ul.menu_color > li {
-	display:inline;
+    display:inline;
 }
 
 #pie {

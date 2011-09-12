@@ -1,6 +1,6 @@
 <?php
-
-include "defcon.php";
+include "funciones.php";
+conexion();
 $busqueda_usuario = strtolower($_GET["q"]);
 if (!$busqueda_usuario)
     return;

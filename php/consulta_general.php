@@ -8,15 +8,15 @@ conexion();
 <html>
     <head>
         <title>Biblos</title>
-        <?php eligeplantilla($_SESSION['plantilla']); ?>
+        <?php eligeplantilla(); ?>
         <script type='text/javascript'> 
             window.onload=esconde_div;
         </script>
     </head>
     <body>
         <div id="menu">
-            <?php dibujaMenu(); ?>
-        </div>    
+            <?php include "menucss.php"; ?>
+        </div>   
         <?php
             include "fichaLibroGenerica.php";
         ?>

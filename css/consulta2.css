@@ -8,6 +8,7 @@ html {
 h1 {
     text-align: center;
 }
+
 form {
     position: absolute;
     top: 70px;
@@ -306,6 +307,7 @@ A:hover {text-decoration:underline;}
     background-color: #00BFFF;
     vertical-align:middle;
     text-align:center;
+    z-index: 50;
 }
 ul.menu_color {
 	list-style:none;
