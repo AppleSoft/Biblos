@@ -38,19 +38,19 @@ controlAdmin();
         $result = mysql_query($query);
 
         echo "<div id='formulario_libro'>";
-        echo "<form action='alquila.php' method='post' name='datos_libro'>";
+        echo "<form action='modificaLibroP.php' method='post' name='datos_libro'>";
         while ($row = mysql_fetch_array($result)) {
             echo "Titulo:<input type='text' name='titulo' value='$row[4]'><br>";
-            echo "Autor:<input type='text' name='abc' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>";
-            echo "Categoria: <input type='text' name='abc' value='" . buscarCampo('nombre_categoria', 'categoria', 'id_categoria', $row[0]) . "'><br>";
-            echo "Idioma: <input type='text' name='abc' value='" . buscarCampo('idioma', 'idiomas_639_1', 'id_idioma_639_1', $row[12]) . "'><br>";
-            echo "ISBN: <input type='text' name='abc' value='$row[3]'><br>";
-            echo "Fecha pub: <input type='text' name='abc' value='$row[5]'><br>";
-            echo "Fecha adq: <input type='text' name='abc' value='$row[6]'><br>";
-            echo "Paginas: <input type='text' name='abc' value='$row[7]'><br>";
-            echo "Sinopsis: <input type='textarea' name='abc' value='$row[8]'><br>";
-            echo "Edicion: <input type='text' name='abc' value='$row[9]'><br>";
-            echo "Editor: <input type='text' name='abc' value='" . buscarCampo('nombre_editorial', 'editorial', 'id_editorial', $row[11]) . "'><br>";
+            echo "Autor:<input type='text' name='autor' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>";
+            echo "Categoria: <input type='text' name='categoria' value='" . buscarCampo('nombre_categoria', 'categoria', 'id_categoria', $row[0]) . "'><br>";
+            echo "Idioma: <input type='text' name='idioma' value='" . buscarCampo('idioma', 'idiomas_639_1', 'id_idioma_639_1', $row[12]) . "'><br>";
+            echo "ISBN: <input type='text' name='isbn' value='$row[3]'><br>";
+            echo "Fecha pub: <input type='text' name='fecha_publicacion' value='$row[5]'><br>";
+            echo "Fecha adq: <input type='text' name='fecha_adquisicion' value='$row[6]'><br>";
+            echo "Paginas: <input type='text' name='paginas' value='$row[7]'><br>";
+            echo "Sinopsis: <input type='textarea' name='sinopsis' value='$row[8]'><br>";
+            echo "Edicion: <input type='text' name='edicion' value='$row[9]'><br>";
+            echo "Editor: <input type='text' name='editor' value='" . buscarCampo('nombre_editorial', 'editorial', 'id_editorial', $row[11]) . "'><br>";
             $fecha = date("Y/m/d-H:i:s");
             echo "<input type='hidden' name='usuario_dni' value='" . buscarCampo('dni', 'usuario', 'nombre_usuario', $usuario) . "'>"; //usuario ->dni
             echo "<input type='hidden' name='libro_categoria_id_categoria' value='$row[0]'>"; //categoria -> id_categoria 

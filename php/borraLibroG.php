@@ -31,7 +31,7 @@ conexion();
 
         <div id="oculto2"></div>
 
-        <h1>Consulta general</h1>
+        <h1>Elimina libro del catalogo</h1>
 
         <div id="pie">
             <?php include "pie_pagina.php"; ?>

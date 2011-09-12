@@ -28,7 +28,7 @@
             echo "<form action='alquila.php' method='post' name='datos_libro'>\n";
 
         while ($row = mysql_fetch_array($result)) {
-            echo "Titulo:<input type='text' name='titulo' value='$row[4]'><br>\n";
+            echo "Titulo:<input type='text' name='titulo' title='$row[4]' value='$row[4]'><br>\n";
             echo "Autor:<input type='text' name='id_autor' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>\n";
             echo "Categoria: <input type='text' name='id_categoria' value='" . buscarCampo('nombre_categoria', 'categoria', 'id_categoria', $row[0]) . "'><br>\n";
             echo "Idioma: <input type='text' name='id_idioma_639_1' value='" . buscarCampo('idioma', 'idiomas_639_1', 'id_idioma_639_1', $row[12]) . "'><br>\n";

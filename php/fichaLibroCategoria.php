@@ -10,20 +10,32 @@ if (!isset($pagina)) {
 $tipousuario = $_SESSION['tipousuario'];
 $quebuscas = $_SESSION['quebuscas'];
 $dondebuscas = $_SESSION['filtro'];
-$sql = "SELECT * FROM libro where categoria_id_categoria='$quebuscas' ORDER BY titulo";
+$sql = "SELECT id_categoria FROM categoria where nombre_categoria LIKE '%$quebuscas%'";
 $query = mysql_query($sql);
+$i = 0;
+while ($row = mysql_fetch_row($query)) {
+    $array_id_categoria[$i] = $row[0];
+    $i++;
+};
 $total_resultados = mysql_num_rows($query);
+$array_busqueda = "";
+for ($i = 1; $i < $total_resultados; $i++) {
+    $array_busqueda = $array_busqueda . " OR categoria_id_categoria='" . $array_id_categoria[$i] . "'";
+}
+$primer_campo = $array_id_categoria[0];
+
+$buscaesto = "categoria_id_categoria='" . $primer_campo . "'" . $array_busqueda;
+$query_setup = "SELECT * FROM libro WHERE $buscaesto ORDER BY titulo";
+$resultado_setup =mysql_query($query_setup);
+$total_setup = mysql_num_rows($resultado_setup);
 $limite = "1";
-$total_paginas = ceil($total_resultados / $limite);
-
+$total_paginas = ceil($total_setup / $limite);
 $offset = ($pagina - 1) * $limite;
-
-$query = "SELECT * FROM libro where categoria_id_categoria='$quebuscas' ORDER BY titulo LIMIT $offset, $limite";
+$query = "SELECT * FROM libro WHERE $buscaesto ORDER BY titulo LIMIT $offset, $limite";
 $result = mysql_query($query);
-$supertotal = mysql_num_rows($result);
 
 echo "<div id='formulario_libro'>\n";
-if ($tipousuario == 1)
+if ($tipousuario == 0)
     echo "<form action='modifica.php' method='post' name='datos_libro'>\n";
 else
     echo "<form action='alquila.php' method='post' name='datos_libro'>\n";
@@ -52,9 +64,9 @@ while ($row = mysql_fetch_array($result)) {
     echo "</div>\n";
 }
 
-echo "<br>Se han encontrado <b>$total_resultados</b> libro(s) con tu criterio de busqueda<br>\n";
+echo "<br>Se han encontrado <b>$total_setup</b> libro(s) con tu criterio de busqueda<br>\n";
 echo "(Libro cuya <b>$dondebuscas</b> sea <b>$quebuscas</b>)<br>\n";
-if ($total_resultados > 0) {
+if ($total_setup > 0) {
     if ($pagina != 1) {
         echo "<br><a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
         $ant_pagina = $pagina - 1;
@@ -76,8 +88,8 @@ if ($total_resultados > 0) {
     }
 
     for ($i = $from; $i <= $to; $i++) {
-        if ($i == $total_resultados)
-            $to = $total_resultados;
+        if ($i == $total_setup)
+            $to = $total_setup;
         if ($i != $pagina) {
             echo "<a href=$mipagina?pagina=$i>$i</a>";
         } else {
@@ -93,7 +105,7 @@ if ($total_resultados > 0) {
     }
 }
 
-if ($tipousuario == 1)
+if ($tipousuario == 0)
     echo "<br><br><input type='submit' value='Modifica libro'/>\n";
 else
     echo "<br><br><input type='submit' value='Alquila libro'/>\n";

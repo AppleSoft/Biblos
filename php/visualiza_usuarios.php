@@ -14,7 +14,7 @@ conexion();
     </head>
     <body>
         <div id="menu">
-            <?php dibujaMenu(); ?>
+            <?php include "menucss.php" ?>
         </div>        
         <h1>Usuarios registrados en Biblos</h1>
         <?php

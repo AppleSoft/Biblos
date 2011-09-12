@@ -62,7 +62,7 @@ conexion();
 
         <div id="oculto2"></div>
 
-        <h1>Consulta con filtro</h1>
+        <h1>Consulta filtrada por <?php echo $_SESSION['filtro'];?></h1>
         
         <div id="pie">
             <?php include "pie_pagina.php"; ?>

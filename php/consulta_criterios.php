@@ -7,7 +7,10 @@
         <?php eligeplantilla(); ?>
     </head>
     <body>
-        <form name="formulario_consulta" id="formulario_consulta" action="consulta_especifica.php" method="post">
+        <?php if (strcmp($_SERVER['PHP_SELF'],'consulta_general.php')) 
+                echo "<form name='formulario_consulta' id='formulario_consulta' action='consulta_especifica.php' method='post'>";
+                else echo "<form name='formulario_consulta' id='formulario_consulta' action='".$_SERVER['PHP_SELF']."' method='post'>";
+         ?>
             <input type="radio" name="filtracion" value="1" onClick="grafica_filtro_autor('block');" />Autor<br />
             <input type="radio" name="filtracion" value="2" onClick="grafica_filtro_titulo('block');"/>Titulo<br />
             <input type="radio" name="filtracion" value="3" onClick="grafica_filtro_categoria('block');"/>Categoria<br />
