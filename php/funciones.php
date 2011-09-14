@@ -207,7 +207,7 @@ function confirmaCorreo($email,$codigo) {
 
     $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
             ->setUsername('applesoftmt@gmail.com')
-            ->setPassword('biblioteca2011');
+            ->setPassword('aquilacontraseña');
 
     //Creamos el mailer pasándole el transport con la configuración de gmail
     $mailer = Swift_Mailer::newInstance($transport);
