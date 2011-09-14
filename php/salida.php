@@ -24,6 +24,7 @@ $_SESSION['dni'] = "";
         echo "<h1>Gracias <b>" . $_SESSION['usuario'] . "</b> por utilizar nuestros servicios</h1>";
         echo "<h3>Logout executado con exito";
         echo "</div>";
+        $query = "UPDATE usuario set plantilla_id_plantilla='".$_SESSION['css']."' where dni='".$_SESSION['dni']."'";
         $_SESSION['usuario'] = "";
         $_SESSION['logeado'] = "";
         $_SESSION['dni'] = "";

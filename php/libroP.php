@@ -1,4 +1,6 @@
 <?php
+include "funciones.php";
+conexion();
 
 $titulo = $_POST['titulo'];
 $id_autor = $_POST['autor'];
@@ -11,9 +13,6 @@ $fecha_adquisicion = $_POST['fecha_adquisicion'];
 $num_paginas = $_POST['num_paginas'];
 $sinopsis = $_POST['sinopsis'];
 $edicion = $_POST['edicion'];
-
-include "defcon.php";
-include "funciones.php";
 
 $q1 = "SELECT apellido1 FROM autor where id_autor=$id_autor";
 $rt1 = mysql_query($q1);

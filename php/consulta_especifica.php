@@ -7,7 +7,7 @@ conexion();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biblos</title>
+        <title>Biblos - <?php echo $_SESSION['usuario']; ?></title>
         <?php eligeplantilla(); ?>
         <script type='text/javascript'> 
             window.onload=esconde_div;

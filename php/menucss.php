@@ -1,7 +1,8 @@
-    <ul class="menu_color">
+<div id="menu">
+<ul class="menu_color">
         <li><a href='#'>Gestion libros</a>
             <ul>
-                <li><a href='consulta_general.php'>Consulta General</a></li>
+                <li><a href='consulta_general.php'>Consulta</a></li>
                 <li><a href='libroG.php'>Agregar</a></li>
                 <li><a href='modificaLibroG.php'>Modificar</a></li>
                 <li><a href='borraLibroG.php'>Borrar</a></li>
@@ -9,6 +10,7 @@
         </li>
         <li><a href='#'>Gestion autores</a>
             <ul>
+                <li><a href='visualiza_autores.php'>Consulta</a></li>
                 <li><a href='autorG.php'>Agregar</a></li>
                 <li><a href='modificaAutorG.php'>Modificar</a></li>
                 <li><a href='borraAutorG.php'>Borrar</a></li>
@@ -16,6 +18,7 @@
         </li>
         <li><a href='#'>Gestion editoriales</a>
             <ul>
+                <li><a href='visualiza_editoriales.php'>Consulta</a></li>
                 <li><a href='editorialG.php'>Agregar</a></li>
                 <li><a href='modificaEditorialG.php'>Modificar</a></li>
                 <li><a href='borraEditorialG.php'>Borrar</a></li>
@@ -23,10 +26,10 @@
         </li>
         <li><a href='#'>Gestion usuarios</a>
             <ul>
-                <li><a href='consulta_usuarios.php'>Consulta</a></li>
-                <li><a href='alta_usuarios.php'>Alta</a></li>
-                <li><a href='visualiza_usuarios.php'>Modifica</a></li>
-                <li><a href='baja_usuarios.php'>Baja</a></li>
+                <li><a href='visualiza_usuarios.php'>Consulta</a></li>
+                <li><a href='usuarioG.php'>Alta</a></li>
+                <li><a href='modificaUsuarioG.php'>Modifica</a></li>
+                <li><a href='borraUsuarioG.php'>Baja</a></li>
             </ul>
         </li>
         <li><a href='#'>Gestion CSS</a>
@@ -37,3 +40,4 @@
             </ul>
         </li>
     </ul>
+</div>

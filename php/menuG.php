@@ -7,7 +7,7 @@ conexion();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biblos - Home</title>
+        <title>Biblos - <?php echo $_SESSION['usuario']; ?></title>
         <?php eligeplantilla(); ?>
     </head>
     <body>

@@ -8,7 +8,7 @@ controlAdmin();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biblos</title>
+        <title>Biblos - <?php echo $_SESSION['usuario']; ?></title>
         <?php eligeplantilla(); ?>
     </head>
     <body>
@@ -38,9 +38,9 @@ controlAdmin();
         $result = mysql_query($query);
 
         echo "<div id='formulario_libro'>";
-        echo "<form action='alquila.php' method='post' name='datos_libro'>";
+        echo "<form action='modificaEditorialP.php' method='post' name='datos_libro'>";
         while ($row = mysql_fetch_array($result)) {
-            echo "Nombre editorial:<input type='text' name='titulo' value='$row[1]'><br>";
+            echo "Nombre editorial:<input type='text' name='nombre_editorial' value='$row[1]'><br>";
             echo "<input type='hidden' name='id_editorial' value='$row[0]'><br>";
         }
 
@@ -91,6 +91,5 @@ controlAdmin();
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
-        <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
     </body>
 </html>

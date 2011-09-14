@@ -8,13 +8,17 @@ controlAdmin();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biblos</title>
+        <title>Biblos - <?php echo $_SESSION['usuario']; ?></title>
         <?php eligeplantilla(); ?>
+        <script type='text/javascript'> 
+            window.onload=esconde_div;
+        </script>
     </head>
     <body>
         <div id="menu">
             <?php include "menucss.php"; ?>
         </div>  
+        
         <?php
         $mipagina = $_SERVER['PHP_SELF'];
         $usuario = $_SESSION['usuario'];
@@ -39,29 +43,36 @@ controlAdmin();
 
         echo "<div id='formulario_libro'>";
         echo "<form action='modificaLibroP.php' method='post' name='datos_libro'>";
+        echo "<table>";
         while ($row = mysql_fetch_array($result)) {
-            echo "Titulo:<input type='text' name='titulo' value='$row[4]'><br>";
-            echo "Autor:<input type='text' name='autor' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>";
-            echo "Categoria: <input type='text' name='categoria' value='" . buscarCampo('nombre_categoria', 'categoria', 'id_categoria', $row[0]) . "'><br>";
-            echo "Idioma: <input type='text' name='idioma' value='" . buscarCampo('idioma', 'idiomas_639_1', 'id_idioma_639_1', $row[12]) . "'><br>";
-            echo "ISBN: <input type='text' name='isbn' value='$row[3]'><br>";
-            echo "Fecha pub: <input type='text' name='fecha_publicacion' value='$row[5]'><br>";
-            echo "Fecha adq: <input type='text' name='fecha_adquisicion' value='$row[6]'><br>";
-            echo "Paginas: <input type='text' name='paginas' value='$row[7]'><br>";
-            echo "Sinopsis: <input type='textarea' name='sinopsis' value='$row[8]'><br>";
-            echo "Edicion: <input type='text' name='edicion' value='$row[9]'><br>";
-            echo "Editor: <input type='text' name='editor' value='" . buscarCampo('nombre_editorial', 'editorial', 'id_editorial', $row[11]) . "'><br>";
+            echo "<tr><td>Titulo:</td><td><input type='text' readonly name='titulo' title='$row[4]' value='$row[4]'></td></tr>\n";
+            echo "<tr><td>Autor:</td><td><input type='text' readonly name='id_autor' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'></td></tr>\n";
+            echo "<tr><td>Categoria:</td><td><input type='text' readonly name='id_categoria' value='" . buscarCampo('nombre_categoria', 'categoria', 'id_categoria', $row[0]) . "'></td></tr>\n";
+            echo "<tr><td>Idioma:</td><td><input type='text' readonly name='id_idioma_639_1' value='" . buscarCampo('idioma', 'idiomas_639_1', 'id_idioma_639_1', $row[12]) . "'></td></tr>\n";
+            echo "<tr><td>ISBN:</td><td><input type='text' name='isbn' value='$row[3]'></td></tr>\n";
+            echo "<tr><td>Fecha pub:</td><td><input type='text' name='fecha_publicacion' value='".date("d/m/Y",strtotime($row[5]))."'></td></tr>\n";
+            echo "<tr><td>Fecha adq:</td><td><input type='text' name='fecha_adquisicion' value='".date("d/m/Y",strtotime($row[6]))."'></td></tr>\n";
+            echo "<tr><td>Paginas:</td><td><input type='text' name='num_paginas' value='$row[7]'></td></tr>\n";
+            echo "<tr><td>Sinopsis:</td><td><input type='textarea' name='sinopsis' title='$row[8]' value='$row[8]'></td></tr>\n";
+            echo "<tr><td>Edicion:</td><td><input type='text' name='edicion' value='$row[9]'></td></tr>\n";
+            echo "<tr><td>Editor:</td><td><input type='text' readonly name='id_editorial' value='" . buscarCampo('nombre_editorial', 'editorial', 'id_editorial', $row[11]) . "'></td></tr>\n";
             $fecha = date("Y/m/d-H:i:s");
-            echo "<input type='hidden' name='usuario_dni' value='" . buscarCampo('dni', 'usuario', 'nombre_usuario', $usuario) . "'>"; //usuario ->dni
-            echo "<input type='hidden' name='libro_categoria_id_categoria' value='$row[0]'>"; //categoria -> id_categoria 
-            echo "<input type='hidden' name='libro_cod_apellido' value='$row[1]'>"; //libro -> cod_apellido
-            echo "<input type='hidden' name='libro_cod_titulo' value='$row[2]'>"; //libro -> cod_titulo
-            echo "<input type='hidden' name='fecha_hora_prestamo' value='$fecha'>"; //fecha y hora date("Ymd") date("H:i:s")
+            echo "<tr><td colspan='2'><input type='hidden' name='usuario_dni' value='" . buscarCampo('dni', 'usuario', 'nombre_usuario', $usuario) . "'></td></tr>\n"; //usuario ->dni
+            echo "<tr><td colspan='2'><input type='hidden' name='libro_categoria_id_categoria' value='$row[0]'></td></tr>\n"; //categoria -> id_categoria 
+            echo "<tr><td colspan='2'><input type='hidden' name='libro_cod_apellido' value='$row[1]'></td></tr>\n"; //libro -> cod_apellido
+            echo "<tr><td colspan='2'><input type='hidden' name='libro_cod_titulo' value='$row[2]'></td></tr>\n"; //libro -> cod_titulo
+            echo "<tr><td colspan='2'><input type='hidden' name='fecha_hora_prestamo' value='$fecha'></td></tr>\n"; //fecha y hora date("Ymd") date("H:i:s")
+
+            $_SESSION['cat'] = $row[0];
+            $_SESSION['ape'] = $row[1];
+            $_SESSION['tit'] = $row[2];
         }
 
-        echo "<br>Hay $total_libros libros en la biblioteca<br>";
+        echo "<tr><td colspan='2'>Hay <b>$total_libros</b> libros en la biblioteca</td></tr>\n";
+
+        echo "<tr><td colspan='2'>";
         if ($pagina != 1) {
-            echo "<br><a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
+            echo "<a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
             $ant_pagina = $pagina - 1;
             echo "&nbsp;<a href=$mipagina?pagina=$ant_pagina><<</a>&nbsp;";
         }
@@ -96,16 +107,24 @@ controlAdmin();
             echo "&nbsp;<a href=$mipagina?pagina=$sig_pagina>>></a>&nbsp;";
             echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_libros>ultima >></a>";
         }
-
-        echo "<br><br><input type='submit' value='Modifica libro'/>";
-
+        echo "</td></tr>";
+        echo "</table>";
+        echo "<input type='submit' value='Guardar modifica'>";
         echo "</form>";
-        mysql_close();
         ?>
         <h1>Modifica libros en catalogo</h1>
+        <div class="filtros">
+            <input type="radio" name="visualizacion" value="Filtrar" onClick="grafica_filtro('block');" />Campos<br />
+            <input type="radio" name="visualizacion" value="Listado general" onClick="esconde_filtros('none');" />Consulta general
+        </div>
+
+        <div id="oculto">
+            <?php include "consulta_criterios.php" ?>
+        </div>
+
+        <div id="oculto2"></div>
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
-        <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
     </body>
 </html>

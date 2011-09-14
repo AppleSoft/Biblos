@@ -8,7 +8,7 @@ controlAdmin();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biblos</title>
+        <title>Biblos - <?php echo $_SESSION['usuario']; ?></title>
         <?php eligeplantilla(); ?>
     </head>
     <body>
@@ -38,18 +38,20 @@ controlAdmin();
         $result = mysql_query($query);
 
         echo "<div id='formulario_libro'>";
-        echo "<form action='alquila.php' method='post' name='datos_libro'>";
+        echo "<form action='modificaAutorP.php' method='post' name='datos_autor'>";
+        echo "<table>";
         while ($row = mysql_fetch_array($result)) {
             echo "<input type='hidden' name='id_autor' value='$row[0]'><br>\n";
-            echo "Nombre:<input type='text' name='nombre' value='$row[1]'><br>\n";
-            echo "Apellido 1:<input type='text' name='apellido1' value='$row[2]'><br>\n";
-            echo "Apellido 2: <input type='text' name='apellido2' value='$row[3]'><br>\n";
-            echo "Nacionalidad: <input type='text' name='nacionalidad' value='$row[4]'><br>\n";
+            echo "<tr><td>Nombre:</td><td><input type='text' name='nombre' value='$row[1]'></td></tr>";
+            echo "<tr><td>Apellido 1:</td><td><input type='text' name='apellido1' value='$row[2]'></td></tr>\n";
+            echo "<tr><td>Apellido 2:</td><td><input type='text' name='apellido2' value='$row[3]'></td></tr>\n";
+            echo "<tr><td>Nacionalidad:</td><td><input type='text' name='nacionalidad' value='$row[4]'></td></tr>\n";
         }
 
-        echo "<br>Hay $total_libros autores en el catalogo<br>";
+        echo "<tr><td colspan='2'>Hay $total_libros autores en el catalogo</td></tr>";
+        echo "<tr><td colspan='2'>";
         if ($pagina != 1) {
-            echo "<br><a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
+            echo "<a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
             $ant_pagina = $pagina - 1;
             echo "&nbsp;<a href=$mipagina?pagina=$ant_pagina><<</a>&nbsp;";
         }
@@ -84,17 +86,16 @@ controlAdmin();
             echo "&nbsp;<a href=$mipagina?pagina=$sig_pagina>>></a>&nbsp;";
             echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_libros>ultima >></a>";
         }
-
-        echo "<br><br><input type='submit' value='Modifica autor'/>";
-
+        echo "</td></tr>\n";
+        echo "<tr><td colspan='2'><input type='submit' value='Modifica autor'/></td></tr>\n";
+        echo "</table>";
         echo "</form>";
         echo "</div>";
-        mysql_close();
+
         ?>
         <h1>Modifica autores en catalogo</h1>
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
-        <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
     </body>
 </html>

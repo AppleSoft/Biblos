@@ -22,11 +22,7 @@
         $result = mysql_query($query);
 
         echo "<div id='formulario_libro'>\n";
-        if ($_SESSION['tipousuario'] == 1)
-            echo "<form action='modifica.php' method='post' name='datos_libro'>\n";
-        else
-            echo "<form action='alquila.php' method='post' name='datos_libro'>\n";
-
+        echo "<form action='borraLibro.php' method='post' name='datos_libro'>\n";
         while ($row = mysql_fetch_array($result)) {
             echo "Titulo:<input type='text' name='titulo' value='$row[4]'><br>\n";
             echo "Autor:<input type='text' name='id_autor' value='" . buscarCampo('nombre', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido1', 'autor', 'id_autor', $row[10]) . "&nbsp;" . buscarCampo('apellido2', 'autor', 'id_autor', $row[10]) . "'><br>\n";
@@ -87,13 +83,7 @@
             echo "&nbsp;<a href=$mipagina?pagina=$sig_pagina>>></a>&nbsp;";
             echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_libros>ultima >></a>";
         }
-
-        if ($_SESSION['tipousuario'] == 1)
-            echo "<br><br><input type='submit' value='Modifica libro'/>\n";
-        else
-            echo "<br><br><input type='submit' value='Alquila libro'/>\n";
-
+        echo "<br><br><input type='submit' value='Elimina libro'/>\n";
         echo "</form>\n";
         echo "</div>\n";
-
-        ?>
+?>

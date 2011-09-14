@@ -17,23 +17,23 @@ controlAdmin();
             <?php include "menucss.php"; ?>
         </div> 
 
-        <FORM ACTION="autorP.php" METHOD="post" onSubmit="return validacampo(this);">
-            Nombre: <INPUT TYPE="text" NAME="nombre" SIZE=30 MAXLENGTH=30 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
-            <BR>
-            Primer apellido: <INPUT TYPE="text" NAME="apellido1" SIZE=35 MAXLENGTH=35 class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>*
-            <BR>
-            Segundo apellido(s): <INPUT TYPE="text" NAME="apellido2" SIZE=35 MAXLENGTH=35 autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/>
-            <BR>
-            Nacionalidad: <INPUT TYPE="text" NAME="nacionalidad" SIZE=30 MAXLENGTH=30 autocomplete="off" onKeyPress="return no_caracter_esp(this,event);" />
-            <BR>
-            <INPUT TYPE="submit" CLASS="boton" VALUE="Registrar">
-        </FORM>
+        <div id="formulario_libro">
+            <FORM ACTION="autorP.php" METHOD="post" onSubmit="return validacampo(this);">
+                <table>
+                    <tr><td>Nombre *:</td><td><INPUT TYPE="text" NAME="nombre" class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/></td></tr>
+                    <tr><td>Primer apellido *:</td><td><INPUT TYPE="text" NAME="apellido1" class="obligatorio" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/></td></tr>
+                    <tr><td>Segundo apellido(s):</td><td><INPUT TYPE="text" NAME="apellido2" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);"/></td></tr>
+                    <tr><td>Nacionalidad:</td><td><INPUT TYPE="text" NAME="nacionalidad" autocomplete="off" onKeyPress="return no_caracter_esp(this,event);" /></td></tr>
+                    <tr><td colspan="2"><INPUT TYPE="submit" CLASS="boton" VALUE="Registrar" /></td></tr>
+                </table>
+            </FORM>
+
+        </div>
 
         <h1>Insertar autor en el catalogo</h1>
 
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
-        <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
     </body>
 </html>

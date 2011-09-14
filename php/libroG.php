@@ -7,7 +7,7 @@ conexion();
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Biblos</title>
+        <title>Biblos  - <?php echo $_SESSION['usuario']; ?></title>
         <?php eligeplantilla(); ?>
     </head>
     <body oncontextmenu="return false;">
@@ -68,6 +68,5 @@ conexion();
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
-        <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
     </body>
 </html>

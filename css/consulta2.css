@@ -11,18 +11,14 @@ h1 {
 
 form {
     position: absolute;
-    top: 70px;
+    top: 100px;
     background:#fff;
-    padding:1em;
-    border:2px solid #eee;
-    margin:15px;
-    width:400px;
+    padding:1.5em;
+    border:4px solid #eee;
+    margin:20px;
+    width:370px;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
-}
-
-.login {
-    background:url("../imgs/book.gif") no-repeat 95% 1em;
 }
 
 fieldset div {
@@ -86,6 +82,7 @@ textarea {
     border:1px solid #ddd;
     background:#fafafa;
     font:bold 0.95em arial, sans-serif;
+    resize:none;
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
@@ -110,26 +107,24 @@ fieldset {
     background-position:0 -26px;
 }
 
-textarea {
-    resize:none;
-}
 #formulario_consulta {
     position:absolute;
-    top:100px;
-    left:500px;
+    top:120px;
+    left: 460px;
     width: 20em;
     border:2px dotted #ddd;
     background: white;
 }
+    
 #busqueda {
-    width: 220px;
+    width: 290px;
     border:2px dotted #ddd;
     background: white;
 }
 .filtros  {
     position:absolute;
-    top: 280px;
-    left:510px;
+    top: 320px;
+    left:480px;
     width: 9em;
     border:2px solid #eee;
     background: white;
@@ -140,8 +135,8 @@ textarea {
 
 #oculto2{
     position: absolute;
-    top: 280px;
-    left:490px;
+    top: 290px;
+    left:480px;
     width: 220px;
     background:#fff;
     padding:1em;
@@ -150,21 +145,18 @@ textarea {
     -khtml-border-radius:0.4em;
 }
 
-
-
 #autocompleta {
     position:absolute;
     top:45px;
-    left:510px;
+    left:480px;
     width: 30em;
-
     -moz-border-radius:0.4em;
     -khtml-border-radius:0.4em;
 }
 
 #quebuscas {
     padding:0.15em;
-    width:200px;
+    width:220px;
     background:#fafafa;
     font:bold 0.95em helvetica, sans-serif;
     -moz-border-radius:0.4em;
@@ -173,9 +165,9 @@ textarea {
 }
 #qr {
     position:absolute;
-    top: 320px;
-    left:475px;
-    padding:1em;
+    top: 420px;
+    left:480px;
+    padding: 5px;
     background: white;
     border:4px dotted #eee;
     -moz-border-radius:0.4em;
@@ -184,8 +176,8 @@ textarea {
 
 #dropdown_filtros {
     position:absolute;
-    top:280px;
-    left:720px;
+    top:295px;
+    left:660px;
     width: 280px;
     background: white;
     border:2px dotted #ddd;
@@ -215,9 +207,6 @@ input[type=checkbox], input[type=radio] {
 .listaCoincidencias:hover {
     background-color: #659CD8;
 }
-
-
-
 
 A:link {text-decoration:none;}
 A:visited {text-decoration:none;}
@@ -262,7 +251,6 @@ A:hover {text-decoration:underline;}
     font: menu;
     font-size: 12px;
     overflow: hidden;
-
 }
 
 .ac_loading {
@@ -313,12 +301,14 @@ A:hover {text-decoration:underline;}
     text-align:center;
     z-index: 50;
 }
+
 ul.menu_color {
 	list-style:none;
         text-decoration: none;
         text-align: center;
         color:#B8860B;
 }
+
 ul.menu_color li {
 	display:block;
 	position:relative;
@@ -328,6 +318,7 @@ ul.menu_color li {
 	border:1px solid #696969;
 	
 }
+
 ul.menu_color ul {
 	position:absolute;
 	left:51px;
@@ -336,6 +327,7 @@ ul.menu_color ul {
 	list-style:none;
         
 }
+
 ul.menu_color > li > ul {
 	position:absolute;
 	left:-41px;
@@ -344,10 +336,15 @@ ul.menu_color > li > ul {
 	list-style:none;
         width:150px;
 }
+
 ul.menu_color li:hover {
 	border:3px solid #aaaaff;
 }
+
 ul.menu_color li:hover > ul {
+	display:block;
+}
+ul.menu_color > li > ul:hover {
 	display:block;
 }
 ul.menu_color > li {
@@ -366,6 +363,7 @@ ul.menu_color > li {
     vertical-align:middle;
     text-align:center;
 }
+
 #logout {
     position: fixed;
     bottom: 0;
@@ -377,3 +375,8 @@ ul.menu_color > li {
     vertical-align:middle;
     text-align:center;
 }
+
+.login {
+    background:url("../imgs/book.gif") no-repeat 95% 1em;
+}
+

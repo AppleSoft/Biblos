@@ -6,36 +6,27 @@ function controlSesion() {
         header('Location: ../index.php');
         exit;
     }
+    else {
+        
+    }
 }
 
-function dibujaMenu() {
-    if ($_SESSION['tipousuario'] == 0) {
-        echo "<li><a href='#'>Gestion libros</a></li>";
-        echo "<ul>";
-        echo "<li><a href='libroG.php'>Agregar un libro a la biblioteca</a></li>";
-        echo "<li><a href='modificaLibroG.php'>Modificar un libro</a></li>";
-        echo "</ul>";
-        echo "<li><a href='#'>Gestion autores</a></li>";
-        echo "<ul>";
-        echo "<li><a href='autorG.php'>Agregar autor a la biblioteca</a></li>";
-        echo "<li><a href='modificaAutorG.php'>Modificar autor</a></li>";
-        echo "</ul>";
-        echo "<li><a href='#'>Gestion editoriales</a></li>";
-        echo "<ul>";
-        echo "<li><a href='editorialG.php'>Agregar una editorial a la biblioteca</a></li>";
-        echo "<li><a href='modificaEditorialG.php'>Modificar editorial</a></li>"; 
-        echo "<ul>";
-        echo "</li>";
-        ?>
-        <ul><li><a href="javascript:;" onClick="window.open('menu_usuarios.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Gestion usuarios</a></li> ||
-<?php
-        }
-    echo "<li><a href='consulta_general.php'>Consulta la biblioteca</a></li></ul> || ";
-?>
-    <li><a href="javascript:;" onClick="window.open('plantilla.php','CSS','width=180, height=150, location=0, status=0, resizable=0, scrollbars=0')">Elige plantilla CSS</a></li>
+function controlAdmin (){
+    $tipousuario = $_SESSION['tipousuario'];
+    if ($tipousuario != 0) {
+    echo "<script type='text/javascript'>
+        window.alert('ahi listillo! tienes que ser administrador para poder modificar la base de datos!')
+        </script>";
+    header("Refresh: 2; URL=menuG.php");
+    exit;
+}
+}
 
-<?php
-
+function eligeplantilla() {
+    $css=trim($_SESSION['css']);
+    echo "<link rel='shortcut icon' type='image/x-icon' href='../imgs/favicon.ico'  />";
+    echo "<link rel='stylesheet' type='text/css' href='../css/consulta" . $css . ".css' />";
+    echo "<script src='../js/funciones.js' type='text/javascript'></script>";
 }
 
 function rellenarCampos($ftabla, $orden) {
@@ -64,40 +55,7 @@ function calcularDewey($id_categoria, $id_autor, $titulo) {
     return $dewey;
 }
 
-function configuraAcceso($server, $usuario, $password, $db) {
-    $fichero = fopen("files/config.aps", "w+");
-    $string1 = $server . chr(13) . ";";
-    fputs($fichero, $string1);
-    $string2 = $usuario . chr(13) . ";";
-    fputs($fichero, $string2);
-    $string3 = $password . chr(13) . ";";
-    fputs($fichero, $string3);
-    $string4 = $db . chr(13) . ";";
-    fputs($fichero, $string4);
-    if ($fichero)
-        echo "Configuracion guardada con exito!";
-    else
-        echo "Error al guardar la configuracion";
-    fclose($fichero);
-}
-
 function conexion() {
-    /* $i = 0;
-      $fichero = fopen("files/config.aps", "r");        //abre el fichero para poder cargar los datos
-
-      while ($text[$i] = fgetcsv($fichero, 1024, ";")) { //pon cada linea del fichero en una variable text[i]
-      $i++;                                   //siguiente linea del fichero
-      }
-
-      fclose($fichero);
-
-      $server = trim($text[0]);
-      $usr = trim($text[1]);
-      $pwd = trim($text[2]);
-      $db = trim($text[3]);
-      $tabla = trim($text[4]);
-     */
-
     $server = "localhost";
     $usr = "phpusr";
     $pwd = "phppwd";
@@ -106,7 +64,6 @@ function conexion() {
     $conecta = mysql_connect($server, $usr, $pwd);
     if (!$conecta)
         echo "Error conectando a la base de datos.";
-
     $datos = mysql_select_db($db, $conecta);
     if (!$datos)
         echo "Error seleccionando la base de datos.";
@@ -120,14 +77,23 @@ function buscarCampo($nombre_campo, $tabla, $nombre_criterio, $criterio) {
     return $campo;
 }
 
-// juntar las dos funciones poniendo un if que averigue si queremos usar la funcion 1 o la 2 (segun este o no la segunda variable)
-
 function extraeCampo2($scampo, $fcampo, $nombre_campo1, $criterio1, $nombre_campo2, $criterio2) {
     $query = "SELECT $scampo FROM $fcampo WHERE $nombre_campo1='$criterio1' and $nombre_campo2='$criterio2'";
     $existe = mysql_query($query);
     $carga = mysql_fetch_row($existe);
     $resultado = $carga[0];
     return $resultado;
+}
+
+function controlQuery($nombreVariable,$mensajeOK,$mensajeKO,$refresh,$paginaRetorno) {
+   if ($nombreVariable) {
+    echo "$mensajeOK";
+}
+else {
+    echo "$mensajeKO";
+} 
+echo "<br>Seras redireccionado en $refresh segundos...";
+header ("refresh:$refresh; url=$paginaRetorno");
 }
 
 function qrlink($nombrelibro, $ididioma) {
@@ -146,27 +112,69 @@ function qrgen($linkdata) {
 
     if (!file_exists($PNG_TEMP_DIR))
         mkdir($PNG_TEMP_DIR);
-
     $filename = $PNG_TEMP_DIR . 'test.png';
 
     QRcode::png($linkdata, $filename, $errorCorrectionLevel, $matrixPointSize, 2);
     echo "<a href='$linkdata'><img src='" . $PNG_WEB_DIR . basename($filename) . "' /></a>";
 }
 
-function eligeplantilla() {
-    $css=trim($_SESSION['css']);
-    echo "<link rel='shortcut icon' type='image/x-icon' href='../imgs/favicon.ico'  />";
-    echo "<link rel='stylesheet' type='text/css' href='../css/consulta" . $css . ".css' />";
-    echo "<script src='../js/funciones.js' type='text/javascript'></script>";
-}
+function layoutFormUsuario ($action, $method, $nombreBoton, $pool, $total_campos, $pagina, $total_paginas) {
+    $mipagina = $_SERVER['PHP_SELF'];
+    echo "<form action='$action' method='$method' name='datos_usuario'>\n";
+    echo "<table>";
+        while ($row = mysql_fetch_array($pool)) {
+            echo "<tr><td>DNI:</td><td><input type='text' name='dni' value='$row[0]'></td></tr>\n";
+            echo "<tr><td>Clave:</td><td><input type='password' name='clave' value='$row[1]'></td></tr>\n";
+            echo "<tr><td>Nombre usuario:</td><td><input type='text' name='nombre_usuario' value='$row[2]'></td></tr>\n";
+            echo "<tr><td>Apellido 1:</td><td><input type='text' name='apellido1_usuario' value='$row[3]'></td></tr>\n";
+            echo "<tr><td>Apellido 2:</td><td><input type='text' name='apellido2_usuario' value='$row[4]'></td></tr>\n";
+            echo "<tr><td>E-Mail:</td><td><input type='text' name='email' value='$row[5]'></td></tr>\n";
+            echo "<tr><td>Telefono:</td><td><input type='text' name='telefono' value='$row[6]'></td></tr>\n";
+            echo "<tr><td>Direccion:</td><td><input type='text' name='Direccion' value='$row[7]'></td></tr>\n";
+            echo "<tr><td>Plantilla:</td><td><input type='textarea' name='plantilla' value='$row[8]'></td></tr>\n";
+            echo "<tr><td>Tipo usuario:</td><td><input type='text' name='tipo_usuario' value='" . buscarCampo('tipo_usuario', 'tipos_usuario', 'id_tipo_usuario', $row[9]) . "'></td></tr>\n";
+        }
 
-function controlAdmin (){
-    $tipousuario = $_SESSION['tipousuario'];
-    if ($tipousuario != 0) {
-    echo "<script type='text/javascript'>
-        window.alert('ahi listillo! tienes que ser administrador para poder modificar la base de datos!')
-        </script>";
-    header("Refresh: 2; URL=menuG.php");
-    exit;
-}
+        echo "<tr><td colspan='2'>Hay $total_campos usuarios en la base de datos</td></tr>\n";
+        echo "<tr><td colspan='2'>";
+        if ($pagina != 1) {
+            echo "<a href=$mipagina?pagina=1><< Primera</a>&nbsp;&nbsp;&nbsp;";
+            $ant_pagina = $pagina - 1;
+            echo "&nbsp;<a href=$mipagina?pagina=$ant_pagina><<</a>&nbsp;";
+        }
+        if ($pagina == $total_paginas) {
+            $to = $total_paginas;
+        } elseif ($pagina == $total_paginas - 1) {
+            $to = $pagina + 1;
+        } elseif ($pagina == $total_paginas - 2) {
+            $to = $pagina + 2;
+        } else {
+            $to = $pagina + 3;
+        }
+        if ($pagina == 1 || $pagina == 2 || $pagina == 3) {
+            $from = 1;
+        } else {
+            $from = $pagina - 3;
+        }
+
+        for ($i = $from; $i <= $to; $i++) {
+            if ($i == $total_paginas)
+                $to = $total_paginas;
+            if ($i != $pagina) {
+                echo "<a href=$mipagina?pagina=$i>$i</a>";
+            } else {
+                echo "<b>[$i]</b>";
+            }
+            if ($i != $total_paginas)
+                echo "&nbsp;";
+        }
+        if ($pagina != $total_paginas) {
+            $sig_pagina = $pagina + 1;
+            echo "&nbsp;<a href=$mipagina?pagina=$sig_pagina>>></a>&nbsp;";
+            echo "&nbsp;&nbsp;&nbsp;<a href=$mipagina?pagina=$total_paginas>ultima >></a>";
+        }
+        echo "</td></tr>";
+        echo "<tr><td colspan='2'><input type='submit' value='$nombreBoton' /></td></tr>";
+        echo "</table>";
+        echo "</form>\n";
 }
