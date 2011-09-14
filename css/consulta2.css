@@ -313,10 +313,10 @@ ul.menu_color li {
 	display:block;
 	position:relative;
 	padding:3px 5px;
-   color:#000;
+        color:#000;
 	background:#ffdead;
 	border:1px solid #696969;
-	
+	margin-left: 5px;
 }
 
 ul.menu_color ul {

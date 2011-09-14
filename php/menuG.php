@@ -20,8 +20,5 @@ conexion();
         <div id="pie">
             <?php include "pie_pagina.php"; ?>
         </div>
-        <div>
-            <?php echo "<a href='salida.php' id='logout'>Logout</a>\n"; ?>
-        </div>
     </body>
 </html>

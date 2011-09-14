@@ -47,13 +47,13 @@ if ($result) {
 }
 else {
     "ERROR: no ha sido posible eviar su contraseña, contact con el <a href='mailto:applesoftmt@gmail.com'>administrador</a>";
- header('Refresh: 5, url= index.php');
+    header('Refresh: 5, url= index.php');
 }
 }
 
 else {
-echo "No hay ninguna cuenta associada a la direccion $email";
- header('Refresh: 5, url= index.php');
+    echo "No hay ninguna cuenta associada a la direccion $email";
+    header('Refresh: 5, url= index.php');
 }
 
 

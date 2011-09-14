@@ -1,22 +1,41 @@
 body {
     color:white;
-	margin: 0px;
-	background-color: #111111;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    background-color: #111111;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Helvetica, Arial, sans-serif;
 }
 #form_general {
-	background-image: url('../imgs/bg2.png');
-	background-repeat: no-repeat;
-	width: 225px;
-	height: 263px;
-	margin: 100px auto 0px auto;
-	padding-left: 35px;
+    background-image: url('../imgs/bg2.png');
+    background-repeat: no-repeat;
+    width: 225px;
+    height: 263px;
+    margin: 100px auto 0px auto;
+    padding-left: 35px;
 }
+#form_general_signup {
+    background-image: url('../imgs/bg.png');
+    background-repeat: no-repeat;
+    width: 225px;
+    height: 263px;
+    margin: 100px auto 0px auto;
+    padding-left: 35px;
+}
+
+#form_general_confirma {
+    background-image: url('../imgs/bg_confirma.png');
+    background-repeat: no-repeat;
+    width: 225px;
+    height: 263px;
+    margin: 100px auto 0px auto;
+    padding-left: 35px;
+}
+
 #cabecera {
-	color: #ffffff;
-	font-size: 16pt;
-	padding: 10px 0px 25px 22px;
+    color: #ffffff;
+    font-size: 16pt;
+    padding: 10px 0px 25px 22px;
 }
+
 .input {
 	margin-left: 38px;
 	margin-top: 14px;
@@ -28,47 +47,124 @@ body {
 	background: transparent;
 	color: #9d9d9d;
 }
-#alinea {
-        padding-top: 7px;
-        margin-top: 8px;
+.campo {
+	width: 164px;
+	height: 17px;
+	border: 0px;
+	padding: 6px;
+	font-size: 12pt;
+	background: transparent;
+	color: #9d9d9d;
 }
 
+#user_sign {
+    margin-top: -7px;
+    margin-left: 30px;
+    width: 164px;
+    height: 17px;
+    border: 0px;
+    padding: 6px;
+    font-size: 12pt;
+    background: transparent;
+    color: #9d9d9d;
+}
+
+#pw_sign {
+    margin-top:13px;
+    margin-left: 29px;
+    width: 164px;
+    height: 17px;
+    border: 0px;
+    padding: 6px;
+    font-size: 12pt;
+    background: transparent;
+    color: #9d9d9d;
+}
+
+#pw2_sign {
+    margin-top:14px;
+margin-left: 29px;
+width: 164px;
+    height: 17px;
+    border: 0px;
+    padding: 6px;
+    font-size: 12pt;
+    background: transparent;
+    color: #9d9d9d;
+}
+
+#email_sign{
+    margin-top:13px;
+margin-left: 29px;
+    width: 164px;
+    height: 17px;
+    border: 0px;
+    padding: 6px;
+    font-size: 6pt;
+    background: transparent;
+    color: #9d9d9d;
+}
+#alinea {
+    padding-top: 7px;
+    margin-top: 8px;
+}
+#alinea_signup {
+    padding-top: 19px;
+    margin-top: 8px;
+}
 #enviar {
-	text-align: right;
-	padding-right: 15px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+#enviar_sign {
+    margin-top: -5px;
+    text-align: right;
+    padding-right: 15px;
 }
 
 .login {
-	background: transparent;
-	border: 0px;
-	background-image: url('../imgs/login.png');
-	background-repeat: no-repeat;
-	width: 77px;
-	height: 29px;
-	cursor: pointer;
+    background: transparent;
+    border: 0px;
+    background-image: url('../imgs/login.png');
+    background-repeat: no-repeat;
+    width: 77px;
+    height: 29px;
+    cursor: pointer;
 }
+
+.signin {
+    background: transparent;
+    border: 0px;
+    background-image: url('../imgs/signin.png');
+    background-repeat: no-repeat;
+    width: 77px;
+    height: 29px;
+    cursor: pointer;
+}
+
 #gest_usuario {
-	padding-top: 29px;
-	font-size: 8pt;
+    padding-top: 29px;
+    font-size: 8pt;
 }
 #gest_usuario a {
-	color: #ffffff;
-	text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 #gest_usuario a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 #gest_usuario span {
-	color: #00baff;
-	font-size: 10pt;
-	font-weight: bold;
+    color: #00baff;
+    font-size: 10pt;
+    font-weight: bold;
 }
 #olvidada {
-	float: left;
-	width: 125px;
+    float: left;
+    width: 125px;
 }
 
 #error {
     margin-top: 50px;
-        color:#fff;
+    color:#fff;
 }

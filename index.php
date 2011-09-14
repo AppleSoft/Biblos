@@ -23,7 +23,7 @@
                     <div id="olvidada">
                         <span>*</span> <a href="recupera_passwordG.php">Recupera password</a></div>
                     <div id="new">
-                        <span>*</span> <a href="registro.php">Nuevo usuario</a></div>
+                        <span>*</span> <a href="registroG.php">Nuevo usuario</a></div>
                 </div>
             
                 <div id="error">
